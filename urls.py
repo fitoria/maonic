@@ -1,4 +1,6 @@
 from django.conf.urls.defaults import *
+from django.contrib.auth.views import password_reset, password_reset_done, password_change, password_change_done
+from django.views.generic.simple import direct_to_template
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -6,7 +8,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Example:
-    (r'^mapeo/', include('maonic.mapeo.urls')),
+    #(r'^mapeo/', include('maonic.mapeo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
