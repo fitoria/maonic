@@ -1,5 +1,4 @@
 # -*- coding: UTF-8 -*-
-
 from django.db import models
 from django.contrib.auth.models import User
 from lugar.models import Municipio
@@ -67,6 +66,7 @@ class FichaBase(models.Model):
     semillas = models.ManyToManyField(Semilla)
     materia_procesada = models.ManyToManyField(MateriaProcesada)
     certificacion = models.ManyToManyField(Certificacion)
+    buenas_practicas = models.ManyToManyField(BuenasPracticas)
 
 
     def __unicode__(self):
@@ -132,3 +132,12 @@ class OrgPublica(FichaBase):
     representante_legal = models.CharField(max_length=100)
     representante_tecnico = models.CharField(max_length=100)
     area_trabajo = models.ManyToManyField(AreaTrabajo)
+
+#tipo de usuario add to class, para filtrar admin.
+class TipoUsuario(models.Model):
+    nombre = models.CharField(max_length=30, unique=True)
+
+    def __unicode__(self):
+        return self.nombre
+
+User.add_to_class('tipo', models.ManyToManyField(TipoUsuario))
