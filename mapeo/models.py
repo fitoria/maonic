@@ -58,6 +58,15 @@ class FichaBase(models.Model):
     fecha_agregado = models.DateTimeField(auto_now_add=True)
     fecha_actualizado = models.DateTimeField(auto_now=True)
 
+    #rubros genericos que estan en todos lados
+    arboles = models.ManyToManyField(RubroArboles)
+    animales = models.ManyToManyField(RubroAnimales)
+    cultivos = models.ManyToManyField(RubroCultivo)
+    semillas = models.ManyToManyField(Semilla)
+    materia_procesada = models.ManyToManyField(MateriaProcesada)
+    certificacion = models.ManyToManyField(Certificacion)
+
+
     def __unicode__(self):
         return self.nombre
 
@@ -68,6 +77,7 @@ class Familia(FichaBase):
     nombre_finca = models.CharField('Nombre de finca', max_length=50)
     area_finca = models.DecimalField('Area de la finca en Manzanas', 
             decimal_places=2, max_digits=8)
+    tipo_org = models.ManyToManyField(TipoOrganizacion)
 
     def __unicode__(self):
         return '%s - %s' % (self.nombre_finca, self.nombre)
@@ -78,6 +88,7 @@ class Cooperativa(FichaBase):
     representante_tecnico = models.CharField(max_length=100)
     num_hombres = models.IntegerField('numero de miembros hombres')
     num_mujeres = models.IntegerField('numero de miembros mujeres')
+    area_trabajo = models.ManyToManyField(AreaTrabajo)
     
 class Centrales(FichaBase):
     fecha_est = models.DateField('fecha de establecimiento')
@@ -87,10 +98,12 @@ class Centrales(FichaBase):
     num_cooperativas= models.IntegerField('numero de asociaciones agrupadas:')
     num_hombres = models.IntegerField('numero de miembros hombres')
     num_mujeres = models.IntegerField('numero de miembros mujeres')
+    area_trabajo = models.ManyToManyField(AreaTrabajo)
 
 class AsistenciaTecnica(FichaBase):
     desde= models.IntegerField('desde cuando provee asistencia')
     promedio = models.IntegerField('promedio de fincas atendidas por ano')
+    tipo_org = models.ManyToManyField(TipoOrganizacion)
 
 class OrgAcompanante(FichaBase):
     pass
@@ -98,21 +111,25 @@ class OrgAcompanante(FichaBase):
 class ComInsumo(FichaBase):
     desde_insumo = models.IntegerField('desde cuando provee insumo')
     promedio = models.IntegerField('promedio de clientes')
+    tipo_cliente = models.ManyToManyField(TipoOrganizacion)
 
 class ComProducto(FichaBase):
     desde = models.IntegerField('desde cuando comercializa')
     promedio = models.DecimalField('promedio de volumen de negocio en US$ por ano', 
             decimal_places=2, max_digits=8)
+    tipo_prov = models.ManyToManyField(TipoOrganizacion)
 
 class Certificadora(FichaBase):
     desde = models.IntegerField('desde cuando certifican')
     promedio = models.IntegerField('promedio de certificaciones')
+    tipo_cliente = models.ManyToManyField(TipoOrganizacion)
 
 class Financiera(FichaBase):
     desde = models.IntegerField('desde cuando certifican')
     promedio = models.IntegerField('promedio de certificaciones')
-    #proveen financiamiento para?
+    tipo_cliente = models.ManyToManyField(TipoOrganizacion)
 
 class OrgPublica(FichaBase):
     representante_legal = models.CharField(max_length=100)
     representante_tecnico = models.CharField(max_length=100)
+    area_trabajo = models.ManyToManyField(AreaTrabajo)
