@@ -1,13 +1,21 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
-import os
-PROJECT_DIR = os.path.dirname(__file__)
+from django.contrib.auth.views import password_change
+from django.contrib.auth.views import password_change_done
+from django.contrib.auth.views import password_reset
+from django.contrib.auth.views import password_reset_done
+from django.views.generic.simple import direct_to_template
+
+from settings import *
+
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
+
                        # Example:
-                       (r'^mapeo/', include('maonic.mapeo.urls')),
+                       #(r'^mapeo/', include('maonic.mapeo.urls')),
+
 
                        # Uncomment the admin/doc line below to enable admin documentation:
                        (r'^admin/doc/', include('django.contrib.admindocs.urls')),
@@ -28,5 +36,5 @@ urlpatterns += patterns('',
 if settings.DEBUG:
     urlpatterns += patterns('',
                             (r'^files/(.*)$', 'django.views.static.serve',
-                            {'document_root': PROJECT_DIR + '/media'}),
+                            {'document_root': PROJECT_ROOT + '/media'}),
                             )
