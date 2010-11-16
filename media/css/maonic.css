@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", Trebuchet, sans-serif;
+}
+a{
+    outline: none;
+    text-decoration: none;
+}
+img{
+    border: none;
+}
+.wrapper{
+    width: 960px;
+    margin: 0 auto;    
+}
+.clean{
+    clear: both;
+}
+.separator{
+    margin-bottom: -5px;
+}
+.header{
+    height: 90px;
+    padding-top: 3px;
+    background: #fbfbfb url(/files/images/header_back.png) repeat-x;
+}
+.logo{
+    float: left;
+}
+.name{
+    font-size: 30px;
+    color: #c2c2c2;
+    float: left;
+    line-height: 66px;
+    margin-left: 15px;
+}
+.name a{
+    font-size: 30px;
+    color: #c2c2c2;
+    float: left;
+    font-weight: bold;
+}
+.name a span{
+    color: #f0da43;
+}
+.sign{
+    float: right;
+    line-height: 66px;
+    font-size: 15px;
+}
+.sign a{
+    color: #727272;
+    font-size: 11px;    
+}
+.center_top{
+    height: 88px;
+    width: 960px;
+    background: url(/files/images/center_top.png) no-repeat;
+}
