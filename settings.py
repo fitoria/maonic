@@ -76,5 +76,13 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'maonic.mapeo',
     'maonic.monitoreo',
+    'registration',
     'south',
 )
+
+ACCOUNT_ACTIVATION_DAYS = 3
+ACCOUNT_ACTIVATION_DAYS = 2
+EMAIL_HOST = 'localhost'
+DEFAULT_FROM_EMAIL = 'carlos@localhost'
+LOGIN_REDIRECT_URL = '/'
+
