@@ -1,0 +1,10 @@
+
+{% block titulo %} Registro de usuario {% endblock %}  
+{% block contenido%}  
+<h1>Registro de usuario</h1>  
+<form class="registro" action="." method="post"> 
+ {% csrf_token %} 
+ {{ form.as_p }}
+<input name="submit" type="submit" value="Registrarse">  
+</form>  
+{% endblock %}
