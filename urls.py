@@ -5,10 +5,7 @@ from django.contrib.auth.views import password_change_done
 from django.contrib.auth.views import password_reset
 from django.contrib.auth.views import password_reset_done
 from django.views.generic.simple import direct_to_template
-
-from settings import *
-
-
+import settings
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -36,5 +33,5 @@ urlpatterns += patterns('',
 if settings.DEBUG:
     urlpatterns += patterns('',
                             (r'^files/(.*)$', 'django.views.static.serve',
-                            {'document_root': PROJECT_ROOT + '/media'}),
+                            {'document_root': settings.PROJECT_ROOT + '/media'}),
                             )
