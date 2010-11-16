@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 from django.db import models
 from django.contrib.auth.models import User
 from lugar.models import Municipio
@@ -104,9 +106,6 @@ class AsistenciaTecnica(FichaBase):
     desde= models.IntegerField('desde cuando provee asistencia')
     promedio = models.IntegerField('promedio de fincas atendidas por ano')
     tipo_org = models.ManyToManyField(TipoOrganizacion)
-
-class OrgAcompanante(FichaBase):
-    pass
 
 class ComInsumo(FichaBase):
     desde_insumo = models.IntegerField('desde cuando provee insumo')
