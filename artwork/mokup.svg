@@ -695,8 +695,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="-1951.7785"
-     inkscape:cy="-600.33237"
+     inkscape:cx="-2027.7869"
+     inkscape:cy="-474.48294"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -12601,7 +12601,7 @@
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect5878"
        width="474.49542"
-       height="363.01788"
+       height="433.72855"
        x="-2018.4843"
        y="1474.0696"
        ry="0" />
@@ -13184,7 +13184,7 @@
        style="fill:none;stroke:url(#linearGradient7814);stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <g
        id="g7378"
-       transform="translate(1,-23)">
+       transform="translate(1,-17)">
       <rect
          ry="3.9979692"
          y="1513.3218"
@@ -13203,7 +13203,7 @@
            y="1533.491"
            x="-2002.9611"
            id="tspan7372"
-           sodipodi:role="line">Seleccione arboles</tspan></text>
+           sodipodi:role="line">Seleccione elementos</tspan></text>
       <path
          id="path7374"
          d="m -1585.5,1526.3622 11,0 -6.5,-7.5 -4.5,7.5 z"
@@ -13214,38 +13214,7 @@
          id="path7376" />
     </g>
     <g
-       id="g7385"
-       transform="translate(2,18)">
-      <rect
-         style="fill:none;stroke:#b1b1b1;stroke-width:1.15880764;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect7387"
-         width="450.37512"
-         height="29.782293"
-         x="-2012.3928"
-         y="1513.301"
-         ry="3.9979692" />
-      <text
-         xml:space="preserve"
-         style="font-size:13.40109539px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
-         x="-2002.9611"
-         y="1533.491"
-         id="text7389"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan7391"
-           x="-2002.9611"
-           y="1533.491">Seleccione animales</tspan></text>
-      <path
-         style="fill:#aaaaaa;stroke:none"
-         d="m -1586.5,1526.3622 11,0 -6.5,-7.5 -4.5,7.5 z"
-         id="path7393" />
-      <path
-         id="path7395"
-         d="m -1586.5,1529.8622 11,0 -6.5,7.5 -4.5,-7.5 z"
-         style="fill:#aaaaaa;stroke:none" />
-    </g>
-    <g
-       transform="translate(3,62)"
+       transform="translate(1.5857864,93.778175)"
        id="g7397">
       <rect
          ry="3.9979692"
@@ -13265,7 +13234,7 @@
            y="1533.491"
            x="-2002.9611"
            id="tspan7403"
-           sodipodi:role="line">Seleccione Cultivos</tspan></text>
+           sodipodi:role="line">Seleccione elementos</tspan></text>
       <path
          id="path7405"
          d="m -1589,1526.8622 11,0 -6.5,-7.5 -4.5,7.5 z"
@@ -13785,143 +13754,251 @@
        width="473.45157"
        height="24.982147"
        x="-2018.4843"
-       y="-1638.0696"
+       y="-1670.0696"
        ry="0"
        transform="scale(1,-1)" />
     <text
        sodipodi:linespacing="125%"
        id="text7761"
-       y="1631.891"
+       y="1663.891"
        x="-2004.015"
        style="font-size:16.21677399px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
        xml:space="preserve"><tspan
-         y="1631.891"
+         y="1663.891"
          x="-2004.015"
          id="tspan7763"
          sodipodi:role="line">Filtros Adicionales</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:13.83978652999999959px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#9ea925;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-2010.9478"
+       y="1491.0239"
+       id="text7863"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan7865"
+         x="-2010.9478"
+         y="1491.0239">Arboles</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text7869"
+       y="1546.1782"
+       x="-2009.5336"
+       style="font-size:13.83978653px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#9ea925;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         y="1546.1782"
+         x="-2009.5336"
+         id="tspan7871"
+         sodipodi:role="line">Animales</tspan></text>
     <g
-       transform="translate(2,135)"
-       id="g7765">
+       transform="translate(2.4142136,40.982756)"
+       id="g7873">
       <rect
-         ry="3.9979692"
-         y="1513.2416"
-         x="-2012.3928"
-         height="29.782293"
+         style="fill:none;stroke:#b1b1b1;stroke-width:1.15880764;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect7875"
          width="450.37512"
-         id="rect7767"
-         style="fill:none;stroke:#b1b1b1;stroke-width:1.15880764;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+         height="29.782293"
+         x="-2012.7365"
+         y="1513.3218"
+         ry="3.9979692" />
       <text
-         sodipodi:linespacing="125%"
-         id="text7769"
-         y="1533.491"
-         x="-2002.9611"
+         xml:space="preserve"
          style="font-size:13.40109539px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
-         xml:space="preserve"><tspan
-           y="1533.491"
+         x="-2002.9611"
+         y="1533.491"
+         id="text7877"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan7879"
            x="-2002.9611"
-           id="tspan7771"
-           sodipodi:role="line">Seleccione arboles</tspan></text>
-      <path
-         id="path7773"
-         d="m -1589.5,1526.8622 11,0 -6.5,-7.5 -4.5,7.5 z"
-         style="fill:#aaaaaa;stroke:none" />
+           y="1533.491">Seleccione elementos</tspan></text>
       <path
          style="fill:#aaaaaa;stroke:none"
-         d="m -1589.5,1530.3622 11,0 -6.5,7.5 -4.5,-7.5 z"
-         id="path7775" />
+         d="m -1585.5,1526.3622 11,0 -6.5,-7.5 -4.5,7.5 z"
+         id="path7881" />
+      <path
+         id="path7883"
+         d="m -1585.5,1529.8622 11,0 -6.5,7.5 -4.5,-7.5 z"
+         style="fill:#aaaaaa;stroke:none" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:13.83978653px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#9ea925;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-2009.5336"
+       y="1600.6255"
+       id="text7885"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan7887"
+         x="-2009.5336"
+         y="1600.6255">Cultivos</tspan></text>
+    <g
+       id="g7889"
+       transform="translate(1.5857864,183.77818)">
+      <rect
+         style="fill:none;stroke:#b1b1b1;stroke-width:1.15880764;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect7891"
+         width="450.37512"
+         height="29.782293"
+         x="-2012.0493"
+         y="1513.2787"
+         ry="3.9979692" />
+      <text
+         xml:space="preserve"
+         style="font-size:13.40109539px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+         x="-2002.9611"
+         y="1533.491"
+         id="text7893"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan7895"
+           x="-2002.9611"
+           y="1533.491">Seleccione elementos</tspan></text>
+      <path
+         style="fill:#aaaaaa;stroke:none"
+         d="m -1589,1526.8622 11,0 -6.5,-7.5 -4.5,7.5 z"
+         id="path7897" />
+      <path
+         id="path7899"
+         d="m -1589,1530.3622 11,0 -6.5,7.5 -4.5,-7.5 z"
+         style="fill:#aaaaaa;stroke:none" />
     </g>
     <g
-       transform="translate(3,219)"
-       id="g7777">
+       transform="translate(1.5857864,239.77818)"
+       id="g7901">
       <rect
          ry="3.9979692"
-         y="1513.199"
+         y="1513.2787"
          x="-2012.0493"
          height="29.782293"
          width="450.37512"
-         id="rect7779"
+         id="rect7903"
          style="fill:none;stroke:#b1b1b1;stroke-width:1.15880764;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
       <text
          sodipodi:linespacing="125%"
-         id="text7781"
+         id="text7905"
          y="1533.491"
          x="-2002.9611"
          style="font-size:13.40109539px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
          xml:space="preserve"><tspan
            y="1533.491"
            x="-2002.9611"
-           id="tspan7783"
-           sodipodi:role="line">Seleccione Cultivos</tspan></text>
+           id="tspan7907"
+           sodipodi:role="line">Seleccione elementos</tspan></text>
       <path
-         id="path7785"
-         d="m -1590.5,1525.3622 11,0 -6.5,-7.5 -4.5,7.5 z"
+         id="path7909"
+         d="m -1589,1526.8622 11,0 -6.5,-7.5 -4.5,7.5 z"
          style="fill:#aaaaaa;stroke:none" />
       <path
          style="fill:#aaaaaa;stroke:none"
-         d="m -1590.5,1528.8622 11,0 -6.5,7.5 -4.5,-7.5 z"
-         id="path7787" />
+         d="m -1589,1530.3622 11,0 -6.5,7.5 -4.5,-7.5 z"
+         id="path7911" />
     </g>
     <g
-       id="g7789"
-       transform="translate(2,179)">
+       id="g7913"
+       transform="translate(1.5857864,295.77818)">
       <rect
          style="fill:none;stroke:#b1b1b1;stroke-width:1.15880764;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect7791"
+         id="rect7915"
          width="450.37512"
          height="29.782293"
-         x="-2012.3928"
-         y="1513.2192"
+         x="-2012.0493"
+         y="1513.2787"
          ry="3.9979692" />
       <text
          xml:space="preserve"
          style="font-size:13.40109539px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
          x="-2002.9611"
          y="1533.491"
-         id="text7793"
+         id="text7917"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
-           id="tspan7795"
+           id="tspan7919"
            x="-2002.9611"
-           y="1533.491">Seleccione animales</tspan></text>
+           y="1533.491">Seleccione elementos</tspan></text>
       <path
          style="fill:#aaaaaa;stroke:none"
-         d="m -1589.5,1525.8622 11,0 -6.5,-7.5 -4.5,7.5 z"
-         id="path7797" />
+         d="m -1589,1526.8622 11,0 -6.5,-7.5 -4.5,7.5 z"
+         id="path7921" />
       <path
-         id="path7799"
-         d="m -1589.5,1529.3622 11,0 -6.5,7.5 -4.5,-7.5 z"
+         id="path7923"
+         d="m -1589,1530.3622 11,0 -6.5,7.5 -4.5,-7.5 z"
          style="fill:#aaaaaa;stroke:none" />
     </g>
     <g
-       id="g7801"
-       transform="translate(2,260)">
+       transform="translate(1.5857864,353.77818)"
+       id="g7925">
       <rect
-         style="fill:none;stroke:#b1b1b1;stroke-width:1.15880764;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect7803"
-         width="450.37512"
+         ry="3.9979692"
+         y="1513.2787"
+         x="-2012.0493"
          height="29.782293"
-         x="-2012.3928"
-         y="1513.1781"
-         ry="3.9979692" />
+         width="450.37512"
+         id="rect7927"
+         style="fill:none;stroke:#b1b1b1;stroke-width:1.15880764;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
       <text
-         xml:space="preserve"
-         style="font-size:13.40109539px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
-         x="-2002.9611"
+         sodipodi:linespacing="125%"
+         id="text7929"
          y="1533.491"
-         id="text7805"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan7807"
+         x="-2002.9611"
+         style="font-size:13.40109539px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+         xml:space="preserve"><tspan
+           y="1533.491"
            x="-2002.9611"
-           y="1533.491">Seleccione Cultivos</tspan></text>
+           id="tspan7931"
+           sodipodi:role="line">Seleccione elementos</tspan></text>
+      <path
+         id="path7933"
+         d="m -1589,1526.8622 11,0 -6.5,-7.5 -4.5,7.5 z"
+         style="fill:#aaaaaa;stroke:none" />
       <path
          style="fill:#aaaaaa;stroke:none"
-         d="m -1590,1525.8622 11,0 -6.5,-7.5 -4.5,7.5 z"
-         id="path7809" />
-      <path
-         id="path7811"
-         d="m -1590,1529.3622 11,0 -6.5,7.5 -4.5,-7.5 z"
-         style="fill:#aaaaaa;stroke:none" />
+         d="m -1589,1530.3622 11,0 -6.5,7.5 -4.5,-7.5 z"
+         id="path7935" />
     </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text7937"
+       y="1692.5493"
+       x="-2009.1801"
+       style="font-size:13.83978653px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#9ea925;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         y="1692.5493"
+         x="-2009.1801"
+         id="tspan7939"
+         sodipodi:role="line">Semillas</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:13.83978653px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#9ea925;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-2010.2407"
+       y="1746.2894"
+       id="text7941"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan7943"
+         x="-2010.2407"
+         y="1746.2894">Producción y comercialización de materia procesada</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text7945"
+       y="1802.1509"
+       x="-2010.2407"
+       style="font-size:13.83978653px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#9ea925;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         y="1802.1509"
+         x="-2010.2407"
+         id="tspan7947"
+         sodipodi:role="line">Buenas prácticas</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:13.83978653px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#9ea925;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-2007.2407"
+       y="1859.1509"
+       id="text7949"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan7951"
+         x="-2007.2407"
+         y="1859.1509">Tipo de certificación</tspan></text>
   </g>
 </svg>
