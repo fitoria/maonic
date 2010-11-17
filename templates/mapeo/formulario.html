@@ -1,7 +1,4 @@
 {% extends "base.html" %}
-{% block extratitle %}
-| Mapeo
-{% endblock %}
 {% block top %}
 <div class="nombre_modulo">
     M&oacute;dulo de Mapeo
@@ -20,40 +17,40 @@
                     <div>
                         <br>
                         <div class="checkboxes">
-                            <input type="checkbox" value="familia" name="familia"><label>Familia Productora</label>
+                            {{form.familia}}<label>{{form.familia.label}}</label>
                             <div class="clean"></div>
                         </div>
                         <div class="checkboxes">
-                            <input type="checkbox" value="cooperativas" name="cooperativas"><label>Cooperativas</label>
+                            {{form.cooperativa}}<label>{{form.cooperativa.label}}</label>
                             <div class="clean"></div>
                         </div>
                         <div class="checkboxes">
-                            <input type="checkbox" value="centrales" name="centrales"><label>Centrales de Cooperativas</label>
+                            {{form.centrales}}<label>{{form.centrales.label}}</label>
                             <div class="clean"></div>
                         </div>
                         <div class="checkboxes">
-                            <input type="checkbox" value="agentes" name="agentes"><label>Agentes de Asistencia<br>T&eacute;cnica</label>
+                            {{form.asistencia}}<label>{{form.asistencia.label}}</label>
                             <div class="clean"></div>
                         </div>
                         <div class="checkboxes">
-                            <input type="checkbox" value="empresas_com_insumos" name="empresas_com_insumos" ><label>Empresas Comerciales<br>de Insumos</label>
+                            {{form.insumo}}<label>{{form.insumo.label}}</label>
                             <div class="clean"></div>
                         </div>
                         <div class="checkboxes">
-                            <input type="checkbox" value="empresas_com_productos" name="empresas_com_productos"><label>Empresas Comerciales<br>de Productos</label>
+                            {{form.producto}}<label>{{form.producto.label}}</label>
                             <div class="clean"></div>
                         </div>
                     </div>
                     <div class="checkboxes">
-                        <input type="checkbox" value="certificadoras" name="certificadoras"><label>Empresas Certificadoras</label>
+                            {{form.certificadora}}<label>{{form.certificadora.label}}</label>
                         <div class="clean"></div>
                     </div>
                     <div class="checkboxes">
-                        <input type="checkbox" value="financiadoras" name="financiadoras"><label>Empresas Financieras</label>
+                            {{form.financiera}}<label>{{form.financiera.label}}</label>
                         <div class="clean"></div>
                     </div>
                     <div class="checkboxes">
-                        <input type="checkbox" value="organizacion" name="organizacion"><label>Organizacion P&uacute;blica</label>
+                            {{form.orgpublica}}<label>{{form.orgpublica.label}}</label>
                         <div class="clean"></div>
                     </div>
                     <br>
@@ -66,11 +63,20 @@
                         Rubros
                     </div>
                     <div class="filtros">
+                        {{form.rubro_cultivo}}
+                        {{form.rubro_animales}}
+                        {{form.rubro_arboles}}
                     </div>
                     <div class="title">
                         Filtros Adicionales
                     </div>
                     <div class="filtros">
+                        {{form.semilla}}
+                        {{form.materia_procesada}}
+                        {{form.buenas_practicas}}
+                        {{form.tipo_organizacion}}
+                        {{form.certificacion}}
+                        {{form.area_trabajo}}
                     </div>
                     <br>
                 </div>                

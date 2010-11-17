@@ -94,7 +94,7 @@ img{
     background-position: 0 -41px;
 }
 .center_center{
-    background: url(/files/images/center_back.png) no-repeat;
+    background: url(/files/images/center_back.jpg) no-repeat;
     width: 960px;
     height: 491px;
 }
@@ -220,11 +220,11 @@ img{
     margin-left: 25px;
     margin-top: 15px;
     float: left;
-    
+
 }
 .paso1, .paso2, .paso3{
     float: left;
-    
+
 }
 .paso1{
     width: 190px;
@@ -287,4 +287,155 @@ img{
 }
 .paso3 .submit:hover{
     background-position: 0 -45px;
+}
+#map_canvas{
+    height: 420px;
+    width: 960px;
+}
+.explora_mapa{
+    padding-top: 10px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+.infowindow{
+    font-size: 13px;
+    color: #989898;
+}
+.infowindow a{
+    color: #989898;
+}
+.infowindow a:hover{
+    text-decoration: underline;
+}
+.elemento_lista{
+    width: 6.667em;
+    height: 74px;
+    float: left;
+}
+.actor_title{
+    height: 21px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 21px;
+}
+.change{
+    height: 46px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 7px;
+}
+
+/**** Comienzan los estilos de la bandera gay jajaja :P *********/
+#familia .actor_title{
+    background: #c1c634;
+}
+#familia .change{
+    background: url(/files/images/lista/familia_back.png) repeat-x;
+}
+#familia .change:hover{
+    background-position: 0 -53px;
+}
+#cooperativa .actor_title{
+    background: #af774b;
+}
+#cooperativa .change{
+    background: url(/files/images/lista/cooperativa_back.png) repeat-x;
+}
+#cooperativa .change:hover{
+    background-position: 0 -53px;
+}
+#centrales .actor_title{
+    background: #e39c1c;
+}
+#centrales .change{
+    background: url(/files/images/lista/centrales_back.png) repeat-x;
+}
+#centrales .change:hover{
+    background-position: 0 -53px;
+}
+#asistencia .actor_title{
+    background: #d8c515;
+}
+#asistencia .change{
+    background: url(/files/images/lista/asistencia_back.png) repeat-x;
+}
+#asistencia .change:hover{
+    background-position: 0 -53px;
+}
+#insumo .actor_title{
+    background: #64ad43;
+}
+#insumo .change{
+    background: url(/files/images/lista/insumo_back.png) repeat-x;
+}
+#insumo .change:hover{
+    background-position: 0 -53px;
+}
+#producto .actor_title{
+    background: #57a692;
+}
+#producto .change{
+    background: url(/files/images/lista/producto_back.png) repeat-x;
+}
+#producto .change:hover{
+    background-position: 0 -53px;
+}
+#certificadora .actor_title{
+    background: #5d68b6;
+}
+#certificadora .change{
+    background: url(/files/images/lista/certificadora_back.png) repeat-x;
+}
+#certificadora .change:hover{
+    background-position: 0 -53px;
+}
+#financiera .actor_title{
+    background: #ba67ad;
+}
+#financiera .change{
+    background: url(/files/images/lista/financiadora_back.png) repeat-x;
+}
+#financiera .change:hover{
+    background-position: 0 -53px;
+}
+#orgpublica .actor_title{
+    background: #b43e3e;
+}
+#orgpublica .change{
+    background: url(/files/images/lista/orgpublica_back.png) repeat-x;
+}
+#orgpublica .change:hover{
+    background-position: 0 -53px;
+}
+.change:hover{
+    color: #fff;
+}
+
+/******************************************************************/
+.errorlist{
+    color: red;
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+.registro{
+    margin-left: 15px;
+}
+.registro label{
+    font-size: 12px;
+    float: left;
+    margin-right: 5px;
+}
+.registro input[type="text"], .registro input[type="password"]{
+    background: #fff url("/files/images/textinputbg.gif") repeat-x top;
+    border: 1px #ccc solid;
+    color: #777;
+    font-size: 12px;
+    padding: 4px 5px;
+    width: 200px;
 }
