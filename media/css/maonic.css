@@ -224,13 +224,15 @@ img{
 }
 .paso1, .paso2, .paso3{
     float: left;
-    margin-left: 20px;
+    
 }
 .paso1{
-    width: 185px;    
+    width: 190px;
+    margin-left: 15px;
 }
 .paso2{
-    width: 350px;    
+    width: 350px;
+    margin-left: 20px;
 }
 .paso1 .actores{
     background: #fff;
@@ -238,9 +240,25 @@ img{
 }
 .paso1 .actores .title{
     background: #5b6371;
-    margin-bottom: 1px;
+    border-bottom: 2px #eee solid;
     font-size: 16px;
     color: #fff;
     padding: 3px 3px 3px 6px;
     font-weight: bold;
+}
+.paso1 .checkboxes{
+    background: #e0e5e4;    
+    margin: 0 8px 6px 8px;
+    padding: 6px 0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 3px;
+}
+.paso1 .checkboxes input{
+    float: left;
+}
+.paso1 .checkboxes label{
+    font-size: 12px;
+    font-weight: bold;
+    float: left;
 }
