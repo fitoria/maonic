@@ -10,11 +10,12 @@
 <p class="warning">Por favor, corija los siguentes erores:</p>
 {% endif %}
 <fieldset><legend>ENTRAR</legend>
-<form method="post" action="?next={{ next|default("/") }}">
+<form method="post" action=".">
+{% csrf_token %}
 <dl>
-<dt><label for="id_username">Usuario:</label>{% if form.username.errors %} <span class="warning">{{ form.username.errors|join(", ") }}</span>{% endif %}</dt>
+
 <dd>{{ form.username|safe }}</dd>
-<dt><label for="id_password">Contraseña:</label>{% if form.password.errors %} <span class="warning">{{ form.password.errors|join(", ") }}</span>{% endif %}</dt>
+
 <dd>{{ form.password|safe }}</dd>
 <dt><input type="submit" value="Log in" /></dt>
 </dl>
