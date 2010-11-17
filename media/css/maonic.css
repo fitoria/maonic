@@ -231,8 +231,11 @@ img{
     margin-left: 15px;
 }
 .paso2{
-    width: 350px;
-    margin-left: 20px;
+    width: 470px;
+    margin-left: 20px;    
+}
+.paso3{
+    margin-left: 10px;
 }
 .paso1 .actores{
     background: #fff;
@@ -261,4 +264,27 @@ img{
     font-size: 12px;
     font-weight: bold;
     float: left;
+}
+.paso2 .rubros{
+    background: #fff;
+    margin-top: 10px;
+}
+.paso2 .rubros .title{
+    background: #7e8273;
+    border-bottom: 2px #eee solid;
+    font-size: 16px;
+    color: #fff;
+    padding: 3px 3px 3px 6px;
+    font-weight: bold;
+}
+.paso3 .submit{
+    border: none;
+    background: url(/files/images/spiner_procesar.png) no-repeat;
+    width: 174px;
+    height: 45px;
+    margin-top: 10px;
+    margin-left: 15px;    
+}
+.paso3 .submit:hover{
+    background-position: 0 -45px;
 }
