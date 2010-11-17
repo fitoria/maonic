@@ -3,6 +3,19 @@
 | Mapeo | Lista
 {% endblock %}
 
+{% block extrahead %}
+<script type="text/javascript">
+    $(document).ready(function(){
+       $('.elemento_lista .change').click(function(){
+           var id = $(this).parent().attr('id');
+          alert('ID: '+ id);
+          //aqui llamar a la funcion que querras usando el id del elemento. Ejemplo
+          //funcionCargar(id);
+       });
+    });
+</script>
+{% endblock %}
+
 {% block top %}
 <div class="nombre_modulo">
     M&oacute;dulo de Mapeo
@@ -10,7 +23,43 @@
 {% endblock %}
 {% block contenido %}
 <div class="full">
-    
+    <div class="elemento_lista" id="familia">
+        <div class="actor_title">5</div>
+        <div class="change">Familias <br>Productoras</div>
+    </div>
+    <div class="elemento_lista" id="cooperativa">
+        <div class="actor_title">10</div>
+        <div class="change">Cooperativas</div>
+    </div>
+    <div class="elemento_lista" id="centrales">
+        <div class="actor_title">8</div>
+        <div class="change">Centrales de<br>Cooperativas</div>
+    </div>
+    <div class="elemento_lista" id="asistencia">
+        <div class="actor_title">6</div>
+        <div class="change">Agentes de<br>Asistencia T&eacute;cnica</div>
+    </div>
+    <div class="elemento_lista" id="insumo">
+        <div class="actor_title">5</div>
+        <div class="change">Empresas<br>Comerciales<br>de Insumos</div>
+    </div>
+    <div class="elemento_lista" id="producto">
+        <div class="actor_title">3</div>
+        <div class="change">Empresas<br>Comerciales<br>de Productos</div>
+    </div>
+    <div class="elemento_lista" id="certificadora">
+        <div class="actor_title">20</div>
+        <div class="change">Empresas<br>Certificadoras</div>
+    </div>
+    <div class="elemento_lista" id="financiera">
+        <div class="actor_title">7</div>
+        <div class="change">Empresas<br>Financieras</div>
+    </div>
+    <div class="elemento_lista" id="orgpublica">
+        <div class="actor_title">5</div>
+        <div class="change">Organizaci&oacute;n<br>P&uacute;blica</div>
+    </div>
+    <div class="clean"></div>
 </div>
 <div class="ajustado">
 
