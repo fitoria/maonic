@@ -94,7 +94,7 @@ img{
     background-position: 0 -41px;
 }
 .center_center{
-    background: url(/files/images/center_back.png) no-repeat;
+    background: url(/files/images/center_back.jpg) no-repeat;
     width: 960px;
     height: 491px;
 }
@@ -329,6 +329,7 @@ img{
     padding-top: 7px;
 }
 
+/**** Comienzan los estilos de la bandera gay jajaja :P *********/
 #familia .actor_title{
     background: #c1c634;
 }
@@ -410,8 +411,6 @@ img{
 #orgpublica .change:hover{
     background-position: 0 -53px;
 }
-
-
 .change:hover{
     color: #fff;
 }
