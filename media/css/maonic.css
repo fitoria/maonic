@@ -220,11 +220,11 @@ img{
     margin-left: 25px;
     margin-top: 15px;
     float: left;
-    
+
 }
 .paso1, .paso2, .paso3{
     float: left;
-    
+
 }
 .paso1{
     width: 190px;
@@ -413,4 +413,29 @@ img{
 }
 .change:hover{
     color: #fff;
+}
+
+/******************************************************************/
+.errorlist{
+    color: red;
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+.registro{
+    margin-left: 15px;
+}
+.registro label{
+    font-size: 12px;
+    float: left;
+    margin-right: 5px;
+}
+.registro input[type="text"], .registro input[type="password"]{
+    background: #fff url("/files/images/textinputbg.gif") repeat-x top;
+    border: 1px #ccc solid;
+    color: #777;
+    font-size: 12px;
+    padding: 4px 5px;
+    width: 200px;
 }
