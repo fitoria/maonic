@@ -24,23 +24,23 @@ class FilterForm(forms.Form):
             widget = forms.CheckboxInput)
 
     #rubros
-    rubro_cultivo = forms.MultipleChoiceField(widget=forms.SelectMultiple,
-            choices=RubroCultivo.objects.all(), label='Rubro Cultivo')
-    rubro_animales = forms.MultipleChoiceField(widget=forms.SelectMultiple,
-            choices=RubroArboles.objects.all(), label='Rubro Animales')
-    rubro_arboles = forms.MultipleChoiceField(widget=forms.SelectMultiple,
-            choices=RubroAnimales.objects.all(), label='Rubro Arboles')
+    rubro_cultivo = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+            queryset=RubroCultivo.objects.all(), label='Rubro Cultivo')
+    rubro_animales = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+            queryset=RubroArboles.objects.all(), label='Rubro Animales')
+    rubro_arboles = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+            queryset=RubroAnimales.objects.all(), label='Rubro Arboles')
 
     #otros filtros
-    semilla = forms.MultipleChoiceField(widget=forms.SelectMultiple,
-            choices=Semilla.objects.all(), label='Semilla')
-    materia_procesada = forms.MultipleChoiceField(widget=forms.SelectMultiple,
-            choices=MateriaProcesada.objects.all(), label='Materia Procesada')
-    buenas_practicas = forms.MultipleChoiceField(widget=forms.SelectMultiple,
-            choices=BuenasPracticas.objects.all(), label='Buenas prácticas')
-    tipo_organizacion = forms.MultipleChoiceField(widget=forms.SelectMultiple,
-            choices=TipoOrganizacion.objects.all(), label='Tipo organización')
-    certificacion = forms.MultipleChoiceField(widget=forms.SelectMultiple,
-            choices=Certificacion.objects.all(), label='Certificación')
-    area_trabajo= forms.MultipleChoiceField(widget=forms.SelectMultiple,
-            choices=AreaTrabajo.objects.all(), label='Area de trabajo')
+    semilla = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+            queryset=Semilla.objects.all(), label='Semilla')
+    materia_procesada = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+            queryset=MateriaProcesada.objects.all(), label='Materia Procesada')
+    buenas_practicas = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+            queryset=BuenasPracticas.objects.all(), label='Buenas prácticas')
+    tipo_organizacion = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+            queryset=TipoOrganizacion.objects.all(), label='Tipo organización')
+    certificacion = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+            queryset=Certificacion.objects.all(), label='Certificación')
+    area_trabajo= forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+            queryset=AreaTrabajo.objects.all(), label='Area de trabajo')
