@@ -23,7 +23,7 @@ img{
 .header{
     height: 90px;
     padding-top: 3px;
-    background: #fbfbfb url(/files/images/header_back.png) repeat-x;
+    background: url(/files/images/header_back.png) repeat-x;
 }
 .logo{
     float: left;
@@ -53,8 +53,102 @@ img{
     color: #727272;
     font-size: 11px;    
 }
+.sign a:hover{
+    text-decoration: underline;
+}
 .center_top{
     height: 88px;
     width: 960px;
     background: url(/files/images/center_top.png) no-repeat;
+    color: #444;
+    font-size: 13px;
+}
+.center_top .description{
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+    width: 790px;    
+}
+.center_top .title{
+    font-size: 21px;
+    color: #444;        
+}
+.center_top .saber_mas{
+    float: right;
+    margin-right: 15px;
+    margin-top: 20px;
+}
+.center_top .saber_mas a{
+    background: url(/files/images/saber_mas.png) no-repeat;
+    display: block;
+    width: 65px;
+    height: 41px;
+}
+.center_top .saber_mas a:hover{
+    background-position: 0 -41px;
+}
+.center_center{
+    background: url(/files/images/center_back.png) no-repeat;
+    width: 960px;
+    height: 491px;
+}
+.center_center .slogan{
+    font-size: 40px;
+    text-shadow: 0.02em 1px 0px #dbdbdb;
+    font-weight: bold;
+}
+.center_center .left{
+    float: left;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.center_center .left .cant{
+    font-size: 22px;
+    color: #fbfa91;
+    font-weight: bold;    
+}
+.center_center .cantidades{
+    float: left;
+    text-align: right;
+    line-height: 12px;
+    margin-left: 20px;
+}
+.center_center .descripciones{
+    float: left;
+    text-align: left;
+    line-height: 18px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;    
+}
+.center_center .unete{
+    display: block;
+    background: url(/files/images/spiner_unete.png) no-repeat;
+    width: 272px;
+    height: 63px;
+    float: left;
+    margin-left: 30px;
+}
+.center_center .unete:hover{
+    background-position: 0 -63px;
+}
+.center_center .right{
+    float: right;
+}
+.footer{
+    background: #cdd13d;
+    height: 116px;
+    border-top: 1px #fff solid;
+}
+.footer .wrapper{
+    background: url(/files/images/sombra.png) repeat-y;
+    height: 116px;
+    width: 1005px;
+}
+
+.footer .wrapper .centro{
+    background: url(/files/images/footer.png) repeat-y;
+    width: 960px;
+    height: 116px;
+    margin: 0 auto;
 }
