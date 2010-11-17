@@ -1,14 +1,17 @@
 {% extends "base.html" %}
-{% block titulo %} Registro de usuario {% endblock %}  
-{% block contenido%}  
-<h1>Registro de usuario</h1>  
-<form class="registro" action="." method="post"> 
- {% csrf_token %} 
- <table>
-  
-   <td>{{ form.as_p }} </td>
-
- </table>
-<input name="submit" type="submit" value="Registrarse">  
-</form>  
+{% block titulo %} Registro de usuario {% endblock %}
+{% block top %}
+<div class="nombre_modulo">
+    Registro de usuario
+</div>
+{% endblock %}
+{% block contenido%}
+<div class="ajustado">    
+    <form class="registro" action="." method="post">{% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input name="submit" type="submit" value="Registrarse">
+    </form>
+</div>
 {% endblock %}
