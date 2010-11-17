@@ -5,7 +5,7 @@
         <div class="sign">
             {% if user.is_authenticated %}
             <span>Bienvenido</span> {{ user.username }}&nbsp;<img class="separator" src="/files/images/separador.png" alt="separador">
-            <a href="/accounts/logout" title="Salir de Administración" >Salir</a><img class="separator" src="/files/images/separador.png" alt="separador"> 
+            <a href="/accounts/logout" title="Salir de Administración" >Salir&nbsp;&nbsp;</a><img class="separator" src="/files/images/separador.png" alt="separador">
             <a href="/admin" title="Salir de Administración" >Administración</a>
             {% else %}
             <a href="/accounts/login/">Iniciar Sesi&oacute;n</a>
