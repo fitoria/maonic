@@ -74,6 +74,7 @@ class FichaBase(models.Model):
 
     class Meta:
         abstract = True
+        ordering = ['nombre']
 
 class Familia(FichaBase):
     nombre_finca = models.CharField('Nombre de finca', max_length=50)
@@ -102,26 +103,46 @@ class Centrales(FichaBase):
     num_mujeres = models.IntegerField('numero de miembros mujeres')
     area_trabajo = models.ManyToManyField(AreaTrabajo)
 
+    class Meta:
+        verbose_name_plural = 'centrales'
+        verbose_name = 'central'
+
 class AsistenciaTecnica(FichaBase):
     desde= models.IntegerField('desde cuando provee asistencia')
-    promedio = models.IntegerField('promedio de fincas atendidas por ano')
+    promedio = models.IntegerField('promedio de fincas atendidas por año')
     tipo_org = models.ManyToManyField(TipoOrganizacion)
+
+    class Meta:
+        verbose_name_plural = 'Agentes de asistencia técnica'
+        verbose_name = 'Agente de asistencia técnica'
 
 class ComInsumo(FichaBase):
     desde_insumo = models.IntegerField('desde cuando provee insumo')
     promedio = models.IntegerField('promedio de clientes')
     tipo_cliente = models.ManyToManyField(TipoOrganizacion)
 
+    class Meta:
+        verbose_name_plural = 'Empresas comercializadora de insumos'
+        verbose_name = 'Empresa comercializadora de insumos'
+
 class ComProducto(FichaBase):
     desde = models.IntegerField('desde cuando comercializa')
-    promedio = models.DecimalField('promedio de volumen de negocio en US$ por ano', 
+    promedio = models.DecimalField('promedio de volumen de negocio en US$ por año', 
             decimal_places=2, max_digits=8)
     tipo_prov = models.ManyToManyField(TipoOrganizacion)
+
+    class Meta:
+        verbose_name_plural = 'Empresas comercializadora de productos'
+        verbose_name = 'Empresa comercializadora de productos'
 
 class Certificadora(FichaBase):
     desde = models.IntegerField('desde cuando certifican')
     promedio = models.IntegerField('promedio de certificaciones')
     tipo_cliente = models.ManyToManyField(TipoOrganizacion)
+
+    class Meta:
+        verbose_name_plural = 'Empresas certificadora'
+        verbose_name = 'Empresa certificadora'
 
 class Financiera(FichaBase):
     desde = models.IntegerField('desde cuando certifican')
@@ -132,6 +153,10 @@ class OrgPublica(FichaBase):
     representante_legal = models.CharField(max_length=100)
     representante_tecnico = models.CharField(max_length=100)
     area_trabajo = models.ManyToManyField(AreaTrabajo)
+
+    class Meta:
+        verbose_name_plural = 'Organizaciones Pública'
+        verbose_name = 'Organización Pública'
 
 #tipo de usuario add to class, para filtrar admin.
 class TipoUsuario(models.Model):
