@@ -288,3 +288,22 @@ img{
 .paso3 .submit:hover{
     background-position: 0 -45px;
 }
+#map_canvas{
+    height: 420px;
+    width: 960px;
+}
+.explora_mapa{
+    padding-top: 10px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+.infowindow{
+    font-size: 13px;
+    color: #989898;
+}
+.infowindow a{
+    color: #989898;
+}
+.infowindow a:hover{
+    text-decoration: underline;
+}
