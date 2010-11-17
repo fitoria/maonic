@@ -1,23 +1,15 @@
-"""
-This file demonstrates two different styles of tests (one doctest and one
-unittest). These will both pass when you run "manage.py test".
-
-Replace these with more appropriate tests for your application.
-"""
-
+from django.test.client import Client
 from django.test import TestCase
 
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.failUnlessEqual(1 + 1, 2)
+class MapeoViewsTest(TestCase):
+    
+    def setUp(self):
+        self.client = Client()
 
-__test__ = {"doctest": """
-Another way to test that 1 + 1 is equal to 2.
+    def test_obtener_lista(self):
+        response = self.client.get('/mapeo/lista/familia/')
+        self.assertEqual(response.status_code, 200)
+        print response
 
->>> 1 + 1 == 2
-True
-"""}
-
+    def test_obtener_lista_valid_view(self):
+        pass

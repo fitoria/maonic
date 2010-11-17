@@ -1,0 +1,18 @@
+<div class="header">
+    <div class="wrapper">
+        <div class="logo"><a href="/"><img src="/files/images/logo.png" alt="Maonic Logo"></a></div>
+        <div class="name"><a href="/">SISTEMA REGIONAL <span>MAONIC</span></a></div>
+        <div class="sign">
+            {% if user.is_authenticated %}
+            <span>Bienvenido</span> {{ user.username }}&nbsp;<img class="separator" src="/files/images/separador.png" alt="separador">
+            <a href="/accounts/logout" title="Salir de Administración" >Salir</a><img class="separator" src="/files/images/separador.png" alt="separador"> 
+            <a href="/admin" title="Salir de Administración" >Administración</a>
+            {% else %}
+            <a href="/accounts/login/">Iniciar Sesi&oacute;n</a>
+            <img class="separator" src="/files/images/separador.png" alt="separador">
+            <a href="/accounts/register/">Crear cuenta nueva</a>
+            {% endif %}
+        </div>
+        <div class="clean"></div>
+    </div>
+</div>

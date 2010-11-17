@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block top %}
+<div class="nombre_modulo">
+    M&oacute;dulo de Mapeo
+</div>
+{% endblock %}
+{% block contenido %}
+<div class="ajustado">
+    <form action="." method="POST">{% csrf_token %}
+        <div class="filtros">
+            <div class="paso1">
+                <img src="/files/images/paso1.png" alt="paso1">
+                <div class="actores">
+                    <div class="title">
+                        Tipo de Actor
+                    </div>
+                    <div>
+                        <br>
+                        <div class="checkboxes">
+                            <input type="checkbox" value="familia" name="familia"><label>Familia Productora</label>
+                            <div class="clean"></div>
+                        </div>
+                        <div class="checkboxes">
+                            <input type="checkbox" value="cooperativas" name="cooperativas"><label>Cooperativas</label>
+                            <div class="clean"></div>
+                        </div>
+                        <div class="checkboxes">
+                            <input type="checkbox" value="centrales" name="centrales"><label>Centrales de Cooperativas</label>
+                            <div class="clean"></div>
+                        </div>
+                        <div class="checkboxes">
+                            <input type="checkbox" value="agentes" name="agentes"><label>Agentes de Asistencia<br>T&eacute;cnica</label>
+                            <div class="clean"></div>
+                        </div>
+                        <div class="checkboxes">
+                            <input type="checkbox" value="empresas_com_insumos" name="empresas_com_insumos" ><label>Empresas Comerciales<br>de Insumos</label>
+                            <div class="clean"></div>
+                        </div>
+                        <div class="checkboxes">
+                            <input type="checkbox" value="empresas_com_productos" name="empresas_com_productos"><label>Empresas Comerciales<br>de Productos</label>
+                            <div class="clean"></div>
+                        </div>
+                    </div>
+                    <div class="checkboxes">
+                        <input type="checkbox" value="certificadoras" name="certificadoras"><label>Empresas Certificadoras</label>
+                        <div class="clean"></div>
+                    </div>
+                    <div class="checkboxes">
+                        <input type="checkbox" value="financiadoras" name="financiadoras"><label>Empresas Financieras</label>
+                        <div class="clean"></div>
+                    </div>
+                    <div class="checkboxes">
+                        <input type="checkbox" value="organizacion" name="organizacion"><label>Organizacion P&uacute;blica</label>
+                        <div class="clean"></div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="paso2">
+                <img src="/files/images/paso2.png" alt="paso2">
+                <div class="rubros">
+                    <div class="title">
+                        Rubros
+                    </div>
+                    <div class="filtros">
+                    </div>
+                    <div class="title">
+                        Filtros Adicionales
+                    </div>
+                    <div class="filtros">
+                    </div>
+                    <br>
+                </div>                
+            </div>
+            <div class="paso3">
+                <img src="/files/images/paso3.png" alt="paso3"><br>
+                <input type="submit" value="" class="submit">
+            </div>
+            <div class="clean"></div>
+        </div>
+    </form>
+</div>
+{% endblock %}

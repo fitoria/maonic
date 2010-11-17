@@ -8,25 +8,20 @@
         {% block extrahead %}{% endblock %}
     </head>
     <body>
-        <div class="header">
-            <div class="wrapper">
-                <div class="logo"><a href="/"><img src="/files/images/logo.png" alt="Maonic Logo"></a></div>
-                <div class="name"><a href="/">SISTEMA REGIONAL <span>MAONIC</span></a></div>
-                <div class="sign">
-                    <a href="/login/">Iniciar Sesi&oacute;n</a>
-                    <img class="separator" src="/files/images/separador.png" alt="separador">
-                    <a href="/register/">Crear cuenta nueva</a>
-                </div>
-                <div class="clean"></div>
-            </div>
-        </div>
+        {% include "header.html" %}
         <div class="content">
             <div class="wrapper">
-                <div class="center_top"></div>
+                <div class="center_top">
+                    {% block top %}
+                    {% endblock %}
+                    <div class="clean"></div>
+                </div>
+                <div class="contenido">                    
+                    {% block contenido %}
+                    {% endblock %}
+                </div>                
             </div>
         </div>
-        <div class="footer">
-
-        </div>
+        {% include "footer.html" %}
     </body>
 </html>
