@@ -1,28 +1,22 @@
 {% extends "base.html" %}
-
-{% block title %}Entrar{% endblock %}
-{% block headline %}Entrar{% endblock %}
-
+{% block title %}| Entrar{% endblock %}
+{% block top %}
+<div class="nombre_modulo">
+    Iniciar Sesi&oacute;n
+</div>
+{% endblock %}
 {% block contenido %}
-
-
-{% if form.errors %}
-<p class="warning">Por favor, corija los siguentes erores:</p>
-{% endif %}
-<fieldset><legend>ENTRAR</legend>
-<form method="post" action=".">
-{% csrf_token %}
-<dl>
-
-<dd>{{ form.username|safe }}</dd>
-
-<dd>{{ form.password|safe }}</dd>
-<dt><input type="submit" value="Log in" /></dt>
-</dl>
-</form>
-</fieldset> 
+<div class="ajustado">    
+    {% if form.errors %}
+    <p class="warning">Por favor, corija los siguentes erores:</p>
+    {% endif %}
+    <form method="post" action="." class="registro">{% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <br>
+        <input name="submit" type="submit" value="Iniciar Sesi&oacute;n">
+    </form>
+</div>
 {% endblock %}
 
-{% block related %}
-<p>Si usted no tiene una cuenta, se puede <a href="/accounts/register/">registrar</a>.
-{% endblock %}
