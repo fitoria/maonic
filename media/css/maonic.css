@@ -48,6 +48,7 @@ img{
     float: right;
     line-height: 66px;
     font-size: 15px;
+    margin-right: 10px;
 }
 .sign a{
     color: #727272;
@@ -56,8 +57,13 @@ img{
 .sign a:hover{
     text-decoration: underline;
 }
+.sign span{
+    color: #727272;
+    font-size: 11px;
+}
 .center_top{
-    height: 88px;
+    padding-bottom: 22px;
+    /*height: 88px;*/
     width: 960px;
     background: url(/files/images/center_top.png) no-repeat;
     color: #444;
@@ -103,15 +109,18 @@ img{
     margin-left: 25px;
 }
 .center_center .left .cant{
-    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;    
     color: #fbfa91;
     font-weight: bold;    
 }
 .center_center .cantidades{
     float: left;
     text-align: right;
-    line-height: 12px;
+    line-height: 35px;
     margin-left: 20px;
+    margin-top: 8px;
 }
 .center_center .descripciones{
     float: left;
@@ -135,20 +144,103 @@ img{
 .center_center .right{
     float: right;
 }
+.center_center .mapeo, .center_center .monitoreo{
+    background: url(/files/images/salidas_back.png) no-repeat;
+    width: 177px;
+    height: 161px;
+    float: left;
+    color: #565e51;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.center_center .mapeo .title, .center_center .monitoreo .title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.center_center .mapeo .desc, .center_center .monitoreo .desc{
+    font-size: 13px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.center_center .mapeo .ira, .center_center .monitoreo .ira{
+    display: block;
+    width: 74px;
+    height: 31px;
+    background: url(/files/images/spiner_ir.png) no-repeat;
+    margin-left: 85px;
+    margin-top: 7px;
+}
+.center_center .mapeo .ira:hover, .center_center .monitoreo .ira:hover{
+    background-position: 0 -31px;
+}
+
 .footer{
     background: #cdd13d;
     height: 116px;
     border-top: 1px #fff solid;
 }
 .footer .wrapper{
-    background: url(/files/images/sombra.png) repeat-y;
+    background: #cdd13d url(/files/images/sombra.png) repeat-y;
     height: 116px;
     width: 1005px;
 }
 
 .footer .wrapper .centro{
-    background: url(/files/images/footer.png) repeat-y;
+    background: url(/files/images/footer.jpg) repeat-y;
     width: 960px;
-    height: 116px;
     margin: 0 auto;
+    padding-top: 25px;
+    height: 91px;
+}
+.footer .wrapper .centro span{
+    color: #666;
+    font-weight: bold;
+}
+.footer .wrapper .credits{
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+.footer .wrapper .credits a{
+    font-weight: bold;
+    color: #3d3d3d;
+}
+.contenido{
+    background: #eee;
+}
+.ajustado{
+    padding: 15px;
+}
+.nombre_modulo{
+    font-size: 25px;
+    color: #444;
+    margin-left: 25px;
+    margin-top: 15px;
+    float: left;
+    
+}
+.paso1, .paso2, .paso3{
+    float: left;
+    margin-left: 20px;
+}
+.paso1{
+    width: 185px;    
+}
+.paso2{
+    width: 350px;    
+}
+.paso1 .actores{
+    background: #fff;
+    margin-top: 10px;
+}
+.paso1 .actores .title{
+    background: #5b6371;
+    margin-bottom: 1px;
+    font-size: 16px;
+    color: #fff;
+    padding: 3px 3px 3px 6px;
+    font-weight: bold;
 }

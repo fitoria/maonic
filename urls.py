@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     (r'^mapeo/', include('maonic.mapeo.urls')),
 
     (r'^$', direct_to_template, {'template': 'index.html'}),
+    (r'^mapeo/$', direct_to_template, {'template': 'mapeo/index.html'}),
     # Uncomment the admin/doc line below to enable admin documentation:
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

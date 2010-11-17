@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block top %}
+<div class="nombre_modulo">
+    M&oacute;dulo de Mapeo
+</div>
+{% endblock %}
+{% block contenido %}
+<div class="ajustado">
+    <form action="." method="POST">{% csrf_token %}
+        <div class="filtros">
+            <div class="paso1">
+                <img src="/files/images/paso1.png" alt="paso1">
+                <div class="actores">
+                    <div class="title">
+                        Tipo de Actor
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="paso2">
+                <img src="/files/images/paso2.png" alt="paso2">
+            </div>
+            <div class="paso3">
+                <img src="/files/images/paso3.png" alt="paso3">
+            </div>
+            <div class="clean"></div>
+        </div>
+    </form>
+</div>
+{% endblock %}
