@@ -6,20 +6,20 @@
 {% block maincontents %}
 
 
-{% if form.errors %}
-<p class="warning">Por favor, corija los siguentes erores:</p>
-{% endif %}
-<fieldset><legend>ENTRAR</legend>
-<form method="post" action="?next={{ next|default("/") }}">
-<dl>
-<dt><label for="id_username">Usuario:</label>{% if form.username.errors %} <span class="warning">{{ form.username.errors|join(", ") }}</span>{% endif %}</dt>
-<dd>{{ form.username|safe }}</dd>
-<dt><label for="id_password">Contraseña:</label>{% if form.password.errors %} <span class="warning">{{ form.password.errors|join(", ") }}</span>{% endif %}</dt>
-<dd>{{ form.password|safe }}</dd>
-<dt><input type="submit" value="Log in" /></dt>
-</dl>
-</form>
-</fieldset> 
+<div id="actividades_lista" >
+        <div id="titulo_tasa">Iniciar Sesión</div>
+        <div id="resultado_actividades">
+            <div class="contenido_actividad">
+                <form action="." method= "POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <table>
+                        {{ form.as_table }}
+                    </table> <br/>
+                    <input type = "submit" value = "Iniciar Sesión" />
+                </form>
+        </div>
+        </div>
+</div>  
 {% endblock %}
 
 {% block related %}
