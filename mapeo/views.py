@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.utils import simplejson
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from decorators import session_required
+from forms import FilterForm 
 
 model_dict = {
     'familia': Familia,
@@ -48,3 +49,12 @@ def obtener_lista(request, modelo):
         lista_objetos = [dict(objeto, modelo = modelo) for objeto 
                 in objectos.object_list().values('id', 'nombre')]
         return HttpResponse(simplejson.dumps(lista_objetos), mimetype="application/json")
+
+def formulario(request):
+    if request.method == 'POST':
+        pass
+    else:
+        form = FilterForm()
+
+    return render_to_response('mapeo/formulario.html', 
+            {'form': form})

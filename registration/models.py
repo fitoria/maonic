@@ -53,6 +53,7 @@ class RegistrationManager(models.Manager):
             if not profile.activation_key_expired():
                 user = profile.user
                 user.is_active = True
+                user.is_staff = True
                 user.save()
                 profile.activation_key = self.model.ACTIVATED
                 profile.save()

@@ -4,10 +4,9 @@ Forms and validation code for user registration.
 """
 
 
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django import forms
 from django.utils.translation import ugettext_lazy as _
-from mapeo.models import TipoUsuario
 
 # I put this on all required fields, because it's easier to pick up
 # on them with CSS or JavaScript if they have a class of "required"
@@ -41,7 +40,7 @@ class RegistrationForm(forms.Form):
                                 label=_("Password"))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs=attrs_dict, render_value=False),
                                 label=_("Password (again)"))
-    tipo_usuario = forms.ModelMultipleChoiceField(queryset=TipoUsuario.objects.all(),
+    tipo_usuario = forms.ModelMultipleChoiceField(queryset=Group.objects.all(),
                                         required = False)
     
     def clean_username(self):
