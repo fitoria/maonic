@@ -164,5 +164,5 @@ class TipoUsuario(models.Model):
 
     def __unicode__(self):
         return self.nombre
-
-User.add_to_class('tipo', models.ManyToManyField(TipoUsuario))
+#Da error raro al hacer tests. :-s
+User.add_to_class('tipo', models.ManyToManyField(TipoUsuario, related_name='usuario_set'))
