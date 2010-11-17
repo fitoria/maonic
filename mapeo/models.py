@@ -157,12 +157,3 @@ class OrgPublica(FichaBase):
     class Meta:
         verbose_name_plural = 'Organizaciones Pública'
         verbose_name = 'Organización Pública'
-
-#tipo de usuario add to class, para filtrar admin.
-class TipoUsuario(models.Model):
-    nombre = models.CharField(max_length=30, unique=True)
-
-    def __unicode__(self):
-        return self.nombre
-#Da error raro al hacer tests. :-s
-User.add_to_class('tipo', models.ManyToManyField(TipoUsuario, related_name='usuario_set'))
