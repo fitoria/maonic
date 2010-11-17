@@ -1,10 +1,10 @@
 {% extends "admin/base.html" %}
 {% load i18n %}
 
-{% block title %}{{ title }} | {% trans 'Nuestro título' %}{% endblock %}
+{% block title %}{{ title }} | {% trans 'Administracion MAONIC' %}{% endblock %}
 
 {% block branding %}
-   <h1 id="site-name"><b> <img src="{{MEDIA_URL}}images/logo.png">{% trans ' Sistema Regional MAONIC' %}</b></h1>
+<h1 id="site-name"><b> <img src="{{MEDIA_URL}}images/logo_admin.png">{% trans ' Sistema Regional MAONIC' %}</b></h1>
 {% endblock %}
 
-{% block nav-global %}<a href="/"><img src="{{MEDIA_URL}}images/home.png">Volve al Sitio</a> {% endblock %}
+{% block nav-global %}<a href="/"><img src="{{MEDIA_URL}}images/home.png">Volver al Sitio</a> {% endblock %}

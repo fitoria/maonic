@@ -1,14 +1,17 @@
 {% extends "base.html" %}
-
-{% block title %}Activación de cuenta{% endblock %}
-{% block headline %}Activación de cuenta{% endblock %}
-
-
-{% block contents%}
-  {% if account %}
-    <p>	Gracias por registrarse! Ahora puede accesar a <a href="/accounts/login/">login</a>.</p>
-  {% else %}
-<p>Lo sentimos, no funcionó. Su enlace de activación era incorrecta, o la clave de activación de su cuenta ha expirado; claves de activación sólo son válidos durante {{ expiration_days }} 
-días.</p>
-  {% endif %}
+{% block extratitle %}Activación de cuenta{% endblock %}
+<div class="nombre_modulo">
+    Activaci&oacute;n de cuenta
+</div>
+{% block contenido %}
+<div class="ajustado">
+    {% if account %}
+    <p>Gracias por registrarse! Ahora puede accesar al sistema <a href="/accounts/login/">iniciando sesión</a>.</p>
+    {% else %}
+    <p>
+        Lo sentimos, no funcionó. Su enlace de activación era incorrecta, o la clave de activación de su cuenta ha expirado;
+        claves de activación sólo son válidos durante {{ expiration_days }} días.
+    </p>
+    {% endif %}
+</div>
 {% endblock %}

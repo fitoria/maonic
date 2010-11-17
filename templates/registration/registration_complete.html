@@ -1,12 +1,13 @@
 {% extends "base.html" %}
-
-{% block title %}Registro completo{% endblock %}
-{% block headline %}
-Revise su correo electrónico!
+{% block extratitle %}Registro completo{% endblock %}
+{% block top %}
+<div class="nombre_modulo">
+    Registro Completo
+</div>
 {% endblock %}
-
 {% block contenido%}
-<p>Un enlace de activación ha sido enviada a la dirección de correo electrónico que ha facilitado, junto con instrucciones para activar tu cuenta.</p>
+<div class="ajustado">
+    <p>Un enlace de activación ha sido enviado a la dirección de correo electrónico que ha facilitado, junto con instrucciones para activar tu cuenta.</p>
+    <a href="/">Ir a inicio</a>
+</div>
 {% endblock %}
-<p>
-se ha registrado con exito</p>
