@@ -695,8 +695,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="-2027.7869"
-     inkscape:cy="-474.48294"
+     inkscape:cx="-4306.8634"
+     inkscape:cy="837.11795"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -10356,10 +10356,10 @@
        id="rect6213"
        style="fill:#fbfbfb;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     <rect
-       ry="12.490594"
+       ry="13.020701"
        y="-99.694214"
        x="-4833.6982"
-       height="565.49695"
+       height="589.49695"
        width="960"
        id="rect6215"
        style="fill:#eeeeee;fill-opacity:1;fill-rule:nonzero;stroke:none" />
@@ -10887,7 +10887,7 @@
        style="fill:#d9dc7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="rect6687"
        width="959"
-       height="57"
+       height="48.514717"
        x="-4834"
        y="37.362183" />
     <text
@@ -10905,22 +10905,6 @@
        id="path6693"
        d="m -4235.8258,-75.379318 -8.5469,10.581929 8.1399,10.581929"
        style="fill:none;stroke:#88a317;stroke-width:2.3023243;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    <rect
-       y="-160.36218"
-       x="-4824"
-       height="53"
-       width="506"
-       id="rect6695"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       transform="scale(1,-1)" />
-    <rect
-       transform="scale(1,-1)"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect6697"
-       width="413"
-       height="53"
-       x="-4309"
-       y="-158.36218" />
     <rect
        ry="0"
        y="16.282017"
@@ -14000,5 +13984,643 @@
          id="tspan7951"
          x="-2007.2407"
          y="1859.1509">Tipo de certificación</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:19.03914452px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#343434;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4816.6904"
+       y="69.380867"
+       id="text7953"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan7955"
+         x="-4816.6904"
+         y="69.380867">Lista de Fincas</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text7961"
+       y="117.52421"
+       x="-4817.7378"
+       style="font-size:15.59949875000000041px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#353535;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         y="117.52421"
+         x="-4817.7378"
+         id="tspan7963"
+         sodipodi:role="line">Finca</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#353535;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4411.4932"
+       y="113.77425"
+       id="text7965"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan7967"
+         x="-4411.4932"
+         y="113.77425">Propietario</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text7971"
+       y="112.52427"
+       x="-4132.9966"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#3b3b3b;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         y="112.52427"
+         x="-4132.9966"
+         id="tspan7973"
+         sodipodi:role="line">Municipio</tspan></text>
+    <rect
+       y="-148.8586"
+       x="-4818.4141"
+       height="26.845457"
+       width="344.75687"
+       id="rect6695"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="scale(1,-1)" />
+    <rect
+       transform="scale(1,-1)"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect6697"
+       width="265.54056"
+       height="27.470449"
+       x="-4413.4697"
+       y="-148.96581" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4808.9883"
+       y="141.27391"
+       id="text7957"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan7959"
+         x="-4808.9883"
+         y="141.27391"
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">La Concordia</tspan></text>
+    <rect
+       y="-147.71582"
+       x="-4134.9731"
+       height="27.470449"
+       width="242.54056"
+       id="rect7969"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="scale(1,-1)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text7979"
+       y="141.27391"
+       x="-4405.9883"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+         y="141.27391"
+         x="-4405.9883"
+         id="tspan7981"
+         sodipodi:role="line">Byron Corrales Rivas</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4124.9883"
+       y="138.27391"
+       id="text7983"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan7985"
+         x="-4124.9883"
+         y="138.27391"
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">Matagalpa</tspan></text>
+    <rect
+       transform="scale(1,-1)"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect8000"
+       width="343.96399"
+       height="26.845457"
+       x="-4818.4141"
+       y="-180.8586" />
+    <rect
+       y="-180.96581"
+       x="-4413.4697"
+       height="27.470449"
+       width="265.54056"
+       id="rect8002"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="scale(1,-1)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text8004"
+       y="173.27391"
+       x="-4808.9883"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+         y="173.27391"
+         x="-4808.9883"
+         id="tspan8006"
+         sodipodi:role="line">La Concordia</tspan></text>
+    <rect
+       transform="scale(1,-1)"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect8008"
+       width="242.54056"
+       height="27.470449"
+       x="-4134.9731"
+       y="-179.71582" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4405.9883"
+       y="173.27391"
+       id="text8010"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8012"
+         x="-4405.9883"
+         y="173.27391"
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">Byron Corrales Rivas</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text8014"
+       y="170.27391"
+       x="-4124.9883"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+         y="170.27391"
+         x="-4124.9883"
+         id="tspan8016"
+         sodipodi:role="line">Matagalpa</tspan></text>
+    <rect
+       y="-214.8586"
+       x="-4818.4141"
+       height="26.845457"
+       width="342.96399"
+       id="rect8020"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="scale(1,-1)" />
+    <rect
+       transform="scale(1,-1)"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect8022"
+       width="265.54056"
+       height="27.470449"
+       x="-4413.4697"
+       y="-214.96581" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4808.9883"
+       y="207.27391"
+       id="text8024"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8026"
+         x="-4808.9883"
+         y="207.27391"
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">La Concordia</tspan></text>
+    <rect
+       y="-213.71582"
+       x="-4134.9731"
+       height="27.470449"
+       width="242.54056"
+       id="rect8028"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="scale(1,-1)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text8030"
+       y="207.27391"
+       x="-4405.9883"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+         y="207.27391"
+         x="-4405.9883"
+         id="tspan8032"
+         sodipodi:role="line">Byron Corrales Rivas</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4124.9883"
+       y="204.27391"
+       id="text8034"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8036"
+         x="-4124.9883"
+         y="204.27391"
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">Matagalpa</tspan></text>
+    <rect
+       transform="scale(1,-1)"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect8040"
+       width="342.46396"
+       height="26.845457"
+       x="-4818.4141"
+       y="-246.8586" />
+    <rect
+       y="-246.96581"
+       x="-4413.4697"
+       height="27.470449"
+       width="265.54056"
+       id="rect8042"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="scale(1,-1)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text8044"
+       y="239.27391"
+       x="-4808.9883"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+         y="239.27391"
+         x="-4808.9883"
+         id="tspan8046"
+         sodipodi:role="line">La Concordia</tspan></text>
+    <rect
+       transform="scale(1,-1)"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect8048"
+       width="242.54056"
+       height="27.470449"
+       x="-4134.9731"
+       y="-245.71582" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4405.9883"
+       y="239.27391"
+       id="text8050"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8052"
+         x="-4405.9883"
+         y="239.27391"
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">Byron Corrales Rivas</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text8054"
+       y="236.27391"
+       x="-4124.9883"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+         y="236.27391"
+         x="-4124.9883"
+         id="tspan8056"
+         sodipodi:role="line">Matagalpa</tspan></text>
+    <rect
+       y="-278.85858"
+       x="-4818.4141"
+       height="26.845457"
+       width="341.96399"
+       id="rect8060"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="scale(1,-1)" />
+    <rect
+       transform="scale(1,-1)"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect8062"
+       width="265.54056"
+       height="27.470449"
+       x="-4413.4697"
+       y="-278.96582" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4808.9883"
+       y="271.27393"
+       id="text8064"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8066"
+         x="-4808.9883"
+         y="271.27393"
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">La Concordia</tspan></text>
+    <rect
+       y="-277.71582"
+       x="-4134.9731"
+       height="27.470449"
+       width="242.54056"
+       id="rect8068"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="scale(1,-1)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text8070"
+       y="271.27393"
+       x="-4405.9883"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+         y="271.27393"
+         x="-4405.9883"
+         id="tspan8072"
+         sodipodi:role="line">Byron Corrales Rivas</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4124.9883"
+       y="268.27393"
+       id="text8074"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8076"
+         x="-4124.9883"
+         y="268.27393"
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">Matagalpa</tspan></text>
+    <rect
+       transform="scale(1,-1)"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect8080"
+       width="341.17108"
+       height="26.845457"
+       x="-4818.4141"
+       y="-310.85858" />
+    <rect
+       y="-310.96582"
+       x="-4413.4697"
+       height="27.470449"
+       width="265.54056"
+       id="rect8082"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="scale(1,-1)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text8084"
+       y="303.27393"
+       x="-4808.9883"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+         y="303.27393"
+         x="-4808.9883"
+         id="tspan8086"
+         sodipodi:role="line">La Concordia</tspan></text>
+    <rect
+       transform="scale(1,-1)"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect8088"
+       width="242.54056"
+       height="27.470449"
+       x="-4134.9731"
+       y="-309.71582" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4405.9883"
+       y="303.27393"
+       id="text8090"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8092"
+         x="-4405.9883"
+         y="303.27393"
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">Byron Corrales Rivas</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text8094"
+       y="300.27393"
+       x="-4124.9883"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+         y="300.27393"
+         x="-4124.9883"
+         id="tspan8096"
+         sodipodi:role="line">Matagalpa</tspan></text>
+    <rect
+       y="-342.85858"
+       x="-4818.4141"
+       height="26.845457"
+       width="340.67108"
+       id="rect8100"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="scale(1,-1)" />
+    <rect
+       transform="scale(1,-1)"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect8102"
+       width="265.54056"
+       height="27.470449"
+       x="-4413.4697"
+       y="-342.96582" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4808.9883"
+       y="335.27393"
+       id="text8104"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8106"
+         x="-4808.9883"
+         y="335.27393"
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">La Concordia</tspan></text>
+    <rect
+       y="-341.71582"
+       x="-4134.9731"
+       height="27.470449"
+       width="242.54056"
+       id="rect8108"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="scale(1,-1)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text8110"
+       y="335.27393"
+       x="-4405.9883"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       xml:space="preserve"><tspan
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+         y="335.27393"
+         x="-4405.9883"
+         id="tspan8112"
+         sodipodi:role="line">Byron Corrales Rivas</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.59949875px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#666666;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+       x="-4124.9883"
+       y="332.27393"
+       id="text8114"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8116"
+         x="-4124.9883"
+         y="332.27393"
+         style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">Matagalpa</tspan></text>
+    <g
+       id="g8223">
+      <rect
+         ry="8.485281"
+         y="-148.8586"
+         x="4425.2627"
+         height="26.845457"
+         width="39.423927"
+         id="rect8127"
+         style="fill:#d9dc7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="scale(-1,-1)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text8129"
+         y="140.10114"
+         x="-4455.0435"
+         style="font-size:15.26864052px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+           y="140.10114"
+           x="-4455.0435"
+           id="tspan8131"
+           sodipodi:role="line">ver</tspan></text>
+    </g>
+    <g
+       id="g8228"
+       transform="translate(-0.5,31.5)">
+      <rect
+         transform="scale(-1,-1)"
+         style="fill:#d9dc7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="rect8230"
+         width="39.423927"
+         height="26.845457"
+         x="4425.2627"
+         y="-148.8586"
+         ry="8.485281" />
+      <text
+         xml:space="preserve"
+         style="font-size:15.26864052px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+         x="-4455.0435"
+         y="140.10114"
+         id="text8232"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan8234"
+           x="-4455.0435"
+           y="140.10114"
+           style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">ver</tspan></text>
+    </g>
+    <g
+       transform="translate(-1,65.5)"
+       id="g8236">
+      <rect
+         ry="8.485281"
+         y="-148.8586"
+         x="4425.2627"
+         height="26.845457"
+         width="39.423927"
+         id="rect8238"
+         style="fill:#d9dc7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="scale(-1,-1)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text8240"
+         y="140.10114"
+         x="-4455.0435"
+         style="font-size:15.26864052px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+           y="140.10114"
+           x="-4455.0435"
+           id="tspan8242"
+           sodipodi:role="line">ver</tspan></text>
+    </g>
+    <g
+       id="g8244"
+       transform="translate(-0.5,98.5)">
+      <rect
+         transform="scale(-1,-1)"
+         style="fill:#d9dc7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="rect8246"
+         width="39.423927"
+         height="26.845457"
+         x="4425.2627"
+         y="-148.8586"
+         ry="8.485281" />
+      <text
+         xml:space="preserve"
+         style="font-size:15.26864052px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+         x="-4455.0435"
+         y="140.10114"
+         id="text8248"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan8250"
+           x="-4455.0435"
+           y="140.10114"
+           style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">ver</tspan></text>
+    </g>
+    <g
+       transform="translate(-0.5,130)"
+       id="g8252">
+      <rect
+         ry="8.485281"
+         y="-148.8586"
+         x="4425.2627"
+         height="26.845457"
+         width="39.423927"
+         id="rect8254"
+         style="fill:#d9dc7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="scale(-1,-1)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text8256"
+         y="140.10114"
+         x="-4455.0435"
+         style="font-size:15.26864052px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+           y="140.10114"
+           x="-4455.0435"
+           id="tspan8258"
+           sodipodi:role="line">ver</tspan></text>
+    </g>
+    <g
+       id="g8260"
+       transform="translate(-0.5,163)">
+      <rect
+         transform="scale(-1,-1)"
+         style="fill:#d9dc7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="rect8262"
+         width="39.423927"
+         height="26.845457"
+         x="4425.2627"
+         y="-148.8586"
+         ry="8.485281" />
+      <text
+         xml:space="preserve"
+         style="font-size:15.26864052px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+         x="-4455.0435"
+         y="140.10114"
+         id="text8264"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan8266"
+           x="-4455.0435"
+           y="140.10114"
+           style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'">ver</tspan></text>
+    </g>
+    <g
+       transform="translate(0,195.5)"
+       id="g8268">
+      <rect
+         ry="8.485281"
+         y="-148.8586"
+         x="4425.2627"
+         height="26.845457"
+         width="39.423927"
+         id="rect8270"
+         style="fill:#d9dc7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="scale(-1,-1)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text8272"
+         y="140.10114"
+         x="-4455.0435"
+         style="font-size:15.26864052px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:'10.15 Saturday Night BRK Bold'"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;-inkscape-font-specification:'10.15 Saturday Night BRK'"
+           y="140.10114"
+           x="-4455.0435"
+           id="tspan8274"
+           sodipodi:role="line">ver</tspan></text>
+    </g>
   </g>
 </svg>
