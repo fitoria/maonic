@@ -6,20 +6,21 @@
 {% block maincontents %}
 
 
-<div id="actividades_lista" >
-        <div id="titulo_tasa">Iniciar Sesión</div>
-        <div id="resultado_actividades">
-            <div class="contenido_actividad">
-                <form action="." method= "POST" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <table>
-                        {{ form.as_table }}
-                    </table> <br/>
-                    <input type = "submit" value = "Iniciar Sesión" />
-                </form>
-        </div>
-        </div>
-</div>  
+{% if form.errors %}
+<p class="warning">Por favor, corija los siguentes erores:</p>
+{% endif %}
+<fieldset><legend>ENTRAR</legend>
+<form method="post" action=".">
+{% csrf_token %}
+<dl>
+
+<dd>{{ form.username|safe }}</dd>
+
+<dd>{{ form.password|safe }}</dd>
+<dt><input type="submit" value="Log in" /></dt>
+</dl>
+</form>
+</fieldset> 
 {% endblock %}
 
 {% block related %}

@@ -13,9 +13,15 @@
                 <div class="logo"><a href="/"><img src="/files/images/logo.png" alt="Maonic Logo"></a></div>
                 <div class="name"><a href="/">SISTEMA REGIONAL <span>MAONIC</span></a></div>
                 <div class="sign">
-                    <a href="/login/">Iniciar Sesi&oacute;n</a>
+                    {% if user.username %}
+                          Bienvenido {{ user.username }} | 
+                          <a href="/accounts/logout" title="Salir de Administración" >Salir</a> 
+                     {% else %} <a href="/accounts/login/">Iniciar Sesi&oacute;n</a>
+                     
+                     {% endif %}
                     <img class="separator" src="/files/images/separador.png" alt="separador">
-                    <a href="/register/">Crear cuenta nueva</a>
+                    <a href="/accounts/register/">Crear cuenta nueva</a>
+                     
                 </div>
                 <div class="clean"></div>
             </div>
