@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block top %}
+<div class="nombre_modulo">
+    M&oacute;dulo de Mapeo
+</div>
+{% endblock %}
+{% block contenido %}
+<div class="ajustado">
+    <form action="." method="POST">{% csrf_token %}
+        <div class="filtros">
+            <div class="paso1">
+                <img src="/files/images/paso1.png" alt="paso1">
+                <div class="actores">
+                    <div class="title">
+                        Tipo de Actor
+                    </div>
+                    <div>
+                        <br>
+                        <div class="checkboxes">
+                            {{form.familia}}<label>{{form.familia.label}}</label>
+                            <div class="clean"></div>
+                        </div>
+                        <div class="checkboxes">
+                            {{form.cooperativa}}<label>{{form.cooperativa.label}}</label>
+                            <div class="clean"></div>
+                        </div>
+                        <div class="checkboxes">
+                            {{form.centrales}}<label>{{form.centrales.label}}</label>
+                            <div class="clean"></div>
+                        </div>
+                        <div class="checkboxes">
+                            {{form.asistencia}}<label>{{form.asistencia.label}}</label>
+                            <div class="clean"></div>
+                        </div>
+                        <div class="checkboxes">
+                            {{form.insumo}}<label>{{form.insumo.label}}</label>
+                            <div class="clean"></div>
+                        </div>
+                        <div class="checkboxes">
+                            {{form.producto}}<label>{{form.producto.label}}</label>
+                            <div class="clean"></div>
+                        </div>
+                    </div>
+                    <div class="checkboxes">
+                            {{form.certificadora}}<label>{{form.certificadora.label}}</label>
+                        <div class="clean"></div>
+                    </div>
+                    <div class="checkboxes">
+                            {{form.financiera}}<label>{{form.financiera.label}}</label>
+                        <div class="clean"></div>
+                    </div>
+                    <div class="checkboxes">
+                            {{form.orgpublica}}<label>{{form.orgpublica.label}}</label>
+                        <div class="clean"></div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="paso2">
+                <img src="/files/images/paso2.png" alt="paso2">
+                <div class="rubros">
+                    <div class="title">
+                        Rubros
+                    </div>
+                    <div class="filtros">
+                        {{form.rubro_cultivo}}
+                        {{form.rubro_animales}}
+                        {{form.rubro_arboles}}
+                    </div>
+                    <div class="title">
+                        Filtros Adicionales
+                    </div>
+                    <div class="filtros">
+                        {{form.semilla}}
+                        {{form.materia_procesada}}
+                        {{form.buenas_practicas}}
+                        {{form.tipo_organizacion}}
+                        {{form.certificacion}}
+                        {{form.area_trabajo}}
+                    </div>
+                    <br>
+                </div>                
+            </div>
+            <div class="paso3">
+                <img src="/files/images/paso3.png" alt="paso3"><br>
+                <input type="submit" value="" class="submit">
+            </div>
+            <div class="clean"></div>
+        </div>
+    </form>
+</div>
+{% endblock %}
