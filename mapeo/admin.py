@@ -12,5 +12,6 @@ admin.site.register(ComProducto)
 admin.site.register(Certificadora)
 admin.site.register(Financiera)
 admin.site.register(OrgPublica)
+admin.site.register(TipoUsuario)
 
 
