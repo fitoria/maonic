@@ -4,6 +4,33 @@
     M&oacute;dulo de Mapeo
 </div>
 {% endblock %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="/files/css/jquery.multiselect.css" />
+<link rel="stylesheet" type="text/css" href="/files/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/files/css/prettify.css" />
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" />
+
+
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/files/js/prettify.js"></script>
+<script type="text/javascript" src="/files/js/jquery.multiselect.js"></script>
+
+<script type="text/javascript" language="javascript" charset="utf-8">
+// <![CDATA[
+//$(document).ready(function(){
+   //$("rubro_cultivo").multiselect();
+//});  
+// ]]>
+
+$(function(){
+   $("select").multiselect(); 
+});
+</script>
+
+
+{% endblock %}
 {% block contenido %}
 <div class="ajustado">
     <form action="." method="POST">{% csrf_token %}
@@ -89,4 +116,5 @@
         </div>
     </form>
 </div>
+
 {% endblock %}
