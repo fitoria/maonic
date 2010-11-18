@@ -26,5 +26,10 @@
     height:250px !important;
 }
 
+.ui-multiselect span{
+color:#696969 !important;
+font-weight:normal !important;
+}
+
 /* remove label borders in IE6 because IE6 does not support transparency */
 * html .ui-multiselect-checkboxes label { border:none }
