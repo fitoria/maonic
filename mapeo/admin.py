@@ -10,13 +10,13 @@ class MaonicAdmin(admin.ModelAdmin):
         elif request.user.is_staff:
             return self.model.objects.filter(user=request.user)
 
-    def get_form(self, request, obj=None, ** kwargs):
-        if request.user.is_superuser:
-            form = super(EncuestaAdmin, self).get_form(self, request, ** kwargs)
-        else:
-            form = super(EncuestaAdmin, self).get_form(self, request, ** kwargs)
-            form.base_fields['user'].queryset = User.objects.filter(pk=request.user.pk)
-        return form
+    #def get_form(self, request, obj=None, ** kwargs):
+    #    if request.user.is_superuser:
+    #        form = super(MaonicAdmin, self).get_form(self, request, ** kwargs)
+    #    else:
+    #        form = super(MaonicAdmin, self).get_form(self, request, ** kwargs)
+    #        form.base_fields['user'].queryset = User.objects.filter(pk=request.user.pk)
+    #    return form
 
 admin.site.register(Familia, MaonicAdmin)
 admin.site.register(Cooperativa, MaonicAdmin)

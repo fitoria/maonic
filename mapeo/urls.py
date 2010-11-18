@@ -8,6 +8,8 @@ urlpatterns = patterns('maonic.mapeo.views',
     (r'^resultados/$', direct_to_template, {'template': 'mapeo/resultados.html'}),
 
     (r'^lista/$', direct_to_template, {'template': 'mapeo/lista.html'}),
-    (r'^lista/(?P<modelo>\w+)/$', 'obtener_lista'),
+    (r'^lista/(?P<modelo>\w+)/$', 'obtener_lista_paginada'),
     (r'^formulario/$', 'formulario'),
+    (r'^mapa/$', 'mapa'),
+    (r'^mapa/(?P<modelo>\w+)/$', 'obtener_lista'),
 )
