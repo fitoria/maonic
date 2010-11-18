@@ -161,9 +161,10 @@ img{
     margin-left: 15px;
 }
 .center_center .mapeo .desc, .center_center .monitoreo .desc{
-    font-size: 12px;
+    font-size: 11px;
     margin-top: 5px;
     margin-left: 15px;
+    padding-right: 5px;
 }
 .center_center .mapeo .ira, .center_center .monitoreo .ira{
     display: block;
