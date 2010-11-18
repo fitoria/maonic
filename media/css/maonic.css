@@ -454,3 +454,7 @@ color:#9ea925;
     padding: 4px 5px;
     width: 200px;
 }
+
+.ui-multiselect-filter input {
+    width: 150px;
+}
