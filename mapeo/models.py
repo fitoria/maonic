@@ -12,7 +12,8 @@ class SelectorBase(models.Model):
         return self.nombre
 
     class Meta:
-        abstract = True 
+        abstract = True
+        ordering = ['nombre'] 
 
 class RubroCultivo(SelectorBase):
     pass
