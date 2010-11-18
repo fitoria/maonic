@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block extratitle %}
+| Mapeo | Resultados
+{% endblock %}
+{% block extrahead %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+    // Aplicar QuickSearch a la tabla y la lista
+    $(document).ready(function () {
+        var lista_modelos = [{%for modelo in lista_modelos%}'{{modelo}}',{%endfor%}];
+        var map;
+        var markers = new Array();
+        var infowindow = new google.maps.InfoWindow();
+        var myLatlng = new google.maps.LatLng(13,-85);
+        var myOptions = {
+            zoom: 7,
+            mapTypeControl: false,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+        var image = new google.maps.MarkerImage('/files/images/custom_marker.png',
+        new google.maps.Size(20, 43),
+        new google.maps.Point(0,0),
+        new google.maps.Point(0, 43));
+
+        $.each(lista_modelos, function(i, item){
+            $.getJSON('/mapeo/mapa/' + item + '/', function(data){
+                $.each(data, function(i, elemento){
+                    markers.push(new Array(elemento.lat, elemento.lon));
+                    var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(elemento.lat, elemento.lon),
+                    map: map,
+                    title: item.nombre,
+                    icon: image
+                    });
+                });
+            });
+        });
+
+        
+        /*google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
+            var text = '<div class="infowindow">';
+            text += '<img src="/files/images/infowindow/familia.png" alt="familia"> <a href="/mapeo/listas/">23 Familias</a><br>';
+            text += '<img src="/files/images/infowindow/cooperativa.png" alt="cooperativa"> <a href="#">5 Cooperativas</a><br>';
+            text += '<img src="/files/images/infowindow/centrales.png" alt="centrales"> <a href="#">2 Centrales de Cooperativas</a><br>';
+            text += '<img src="/files/images/infowindow/agentes.png" alt="agentes"> <a href="#">10 Agentes de Asistencia Técnica</a><br>';
+            text += '<img src="/files/images/infowindow/empresas_insumos.png" alt="insumos"> <a href="#">6 Empresas Comerciales de Insumos</a><br>';
+            text += '<img src="/files/images/infowindow/empresas_productos.png" alt="productos"> <a href="#">8 Empresas Comerciales de Productos</a><br>';
+            text += '<img src="/files/images/infowindow/certificadora.png" alt="agentes"> <a href="#">5 Empresas Certificadoras</a><br>';
+            text += '<img src="/files/images/infowindow/financiadoras.png" alt="financiadoras"> <a href="#">15 Empresas Financiadoras</a><br>';
+            text += '<img src="/files/images/infowindow/organizacion.png" alt="organizaciones"> <a href="#">5 Organización Publica</a><br>';
+            text += '</div>';
+            infowindow.setContent(text);
+        });*/
+    });
+</script>
+{% endblock %}
+{% block top %}
+<div class="nombre_modulo">
+    M&oacute;dulo de Mapeo
+</div>
+{% endblock %}
+{% block contenido %}
+<div class="full">
+    <div class="explora_mapa">
+        <img src="/files/images/explora_mapa.png" alt="explora el mapa">
+    </div>
+    <div id="map_canvas"></div>
+</div>
+{% endblock %}

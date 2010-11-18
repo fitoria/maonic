@@ -48,9 +48,9 @@ class FichaBase(models.Model):
     direccion = models.TextField()
     municipio = models.ForeignKey(Municipio)
     lat = models.DecimalField(blank=True, max_digits=8, 
-            decimal_places=2, verbose_name='latitud')
+            decimal_places=2, verbose_name='latitud', null=True)
     lon = models.DecimalField(blank=True, max_digits=8, 
-            decimal_places=2, verbose_name='longitud')
+            decimal_places=2, verbose_name='longitud', null=True)
     telefono = models.CharField(max_length=8, blank=True, null=True) 
     celular = models.CharField(max_length=8, blank=True, null=True) 
     email = models.EmailField(blank=True, null=True)
