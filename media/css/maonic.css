@@ -237,6 +237,7 @@ img{
 }
 .paso3{
     margin-left: 10px;
+    width:225px;
 }
 .paso1 .actores{
     background: #fff;
@@ -262,9 +263,9 @@ img{
     float: left;
 }
 .paso1 .checkboxes label{
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
-    float: left;
+
 }
 .paso2 .rubros{
     background: #fff;
@@ -328,6 +329,19 @@ img{
     font-weight: bold;
     text-align: center;
     padding-top: 7px;
+}
+
+/* Agregado por Byron */
+
+.filtros_form{
+padding:10px;
+width:100%;
+}
+
+.filtos_label{
+font-size: 13px;
+font-weight:bold;
+color:#9ea925;
 }
 
 /**** Comienzan los estilos de la bandera gay jajaja :P *********/
@@ -440,6 +454,7 @@ img{
     padding: 4px 5px;
     width: 200px;
 }
-.ui-multiselect-filter input{
-    width: 170px;
+
+.ui-multiselect-filter input {
+    width: 150px;
 }

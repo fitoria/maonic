@@ -3,11 +3,14 @@
 | Mapeo | Resultados
 {% endblock %}
 {% block extrahead %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
     // Aplicar QuickSearch a la tabla y la lista
     $(document).ready(function () {
+        var lista_modelos = [{%for modelo in lista_modelos%}'{{modelo}}',{%endfor%}];
         var map;
+        var markers = new Array();
         var infowindow = new google.maps.InfoWindow();
         var myLatlng = new google.maps.LatLng(13,-85);
         var myOptions = {
@@ -21,13 +24,23 @@
         new google.maps.Size(20, 43),
         new google.maps.Point(0,0),
         new google.maps.Point(0, 43));
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(12.14746, -86.27339),
-            map: map,
-            title: "Titulo del municipio",
-            icon: image
+
+        $.each(lista_modelos, function(i, item){
+            $.getJSON('/mapeo/mapa/' + item + '/', function(data){
+                $.each(data, function(i, elemento){
+                    markers.push(new Array(elemento.lat, elemento.lon));
+                    var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(elemento.lat, elemento.lon),
+                    map: map,
+                    title: item.nombre,
+                    icon: image
+                    });
+                });
+            });
         });
-        google.maps.event.addListener(marker, 'click', function() {
+
+        
+        /*google.maps.event.addListener(marker, 'click', function() {
             infowindow.open(map, marker);
             var text = '<div class="infowindow">';
             text += '<img src="/files/images/infowindow/familia.png" alt="familia"> <a href="/mapeo/listas/">23 Familias</a><br>';
@@ -41,7 +54,7 @@
             text += '<img src="/files/images/infowindow/organizacion.png" alt="organizaciones"> <a href="#">5 Organización Publica</a><br>';
             text += '</div>';
             infowindow.setContent(text);
-        });
+        });*/
     });
 </script>
 {% endblock %}
