@@ -61,13 +61,13 @@ class FichaBase(models.Model):
     fecha_actualizado = models.DateTimeField(auto_now=True)
 
     #rubros genericos que estan en todos lados
-    arboles = models.ManyToManyField(RubroArboles)
-    animales = models.ManyToManyField(RubroAnimales)
-    cultivos = models.ManyToManyField(RubroCultivo)
-    semillas = models.ManyToManyField(Semilla)
-    materia_procesada = models.ManyToManyField(MateriaProcesada)
-    certificacion = models.ManyToManyField(Certificacion)
-    buenas_practicas = models.ManyToManyField(BuenasPracticas)
+    arboles = models.ManyToManyField(RubroArboles, blank=True)
+    animales = models.ManyToManyField(RubroAnimales, blank=True)
+    cultivos = models.ManyToManyField(RubroCultivo, blank=True)
+    semillas = models.ManyToManyField(Semilla, blank=True)
+    materia_procesada = models.ManyToManyField(MateriaProcesada, blank=True)
+    certificacion = models.ManyToManyField(Certificacion, blank=True)
+    buenas_practicas = models.ManyToManyField(BuenasPracticas, blank=True)
 
 
     def __unicode__(self):
