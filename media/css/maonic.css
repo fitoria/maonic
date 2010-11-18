@@ -62,8 +62,8 @@ img{
     font-size: 11px;
 }
 .center_top{
-    padding-bottom: 22px;
-    /*height: 88px;*/
+    /*padding-bottom: 22px;*/
+    height: 88px;
     width: 960px;
     background: url(/files/images/center_top.png) no-repeat;
     color: #444;
