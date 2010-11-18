@@ -1,5 +1,19 @@
 {% extends "base.html" %}
 {% block titulo %} Registro de usuario {% endblock %}
+{% block extrahead %}
+
+<link rel="stylesheet" type="text/css" href="/files/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/files/css/prettify.css" />
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="/files/css/jquery.multiselect.filter.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/files/js/prettify.js"></script>
+<script type="text/javascript" src="/files/js/jquery.multiselect.js"></script>
+<script type="text/javascript" src="/files/js/jquery.multiselect.filter.js"></script>
+
+{% endblock %}
+
 {% block top %}
 <div class="nombre_modulo">
     Registro de usuario
@@ -14,4 +28,22 @@
         <input name="submit" type="submit" value="Registrarse">
     </form>
 </div>
+<script type="text/javascript">
+$(function(){
+   
+   // cultivos
+	$("#id_tipo_usuario").multiselect({
+		//header: "Escoja los Cultivos",
+		//show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Seleccione elementos',
+		selectedText: '# seleccionados',
+		checkAllText: 'Seleccionar todos',
+		uncheckAllText: 'Quitar todos',
+        minWidth:'210',
+        selectedList: 5 
+	}).multiselectfilter({label:'Buscar',placeholder:''});
+	
+});
+</script>
 {% endblock %}
