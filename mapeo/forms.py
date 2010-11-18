@@ -12,9 +12,9 @@ class FilterForm(forms.Form):
             widget = forms.CheckboxInput)
     asistencia = forms.CharField(label='Asistencia', 
             widget = forms.CheckboxInput)
-    insumo = forms.CharField(label='Empresa comercializadora de Insumos', 
+    insumo = forms.CharField(label='Empresa de Insumos', 
             widget = forms.CheckboxInput)
-    producto = forms.CharField(label='Empresa comercializadora producto.', 
+    producto = forms.CharField(label='Empresa de productos.', 
             widget = forms.CheckboxInput)
     certificadora = forms.CharField(label='Empresa certificadora', 
             widget = forms.CheckboxInput)
@@ -28,10 +28,10 @@ class FilterForm(forms.Form):
             queryset=RubroCultivo.objects.all(), label='Rubro Cultivo', 
             required=False)
     rubro_animales = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
-            queryset=RubroArboles.objects.all(), label='Rubro Animales', 
+            queryset=RubroAnimales.objects.all(), label='Rubro Animales', 
             required=False)
     rubro_arboles = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
-            queryset=RubroAnimales.objects.all(), label='Rubro Arboles',
+            queryset=RubroArboles.objects.all(), label='Rubro Arboles',
             required=False)
 
     #otros filtros
