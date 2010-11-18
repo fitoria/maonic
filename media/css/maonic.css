@@ -62,8 +62,8 @@ img{
     font-size: 11px;
 }
 .center_top{
-    padding-bottom: 22px;
-    /*height: 88px;*/
+    /*padding-bottom: 22px;*/
+    height: 88px;
     width: 960px;
     background: url(/files/images/center_top.png) no-repeat;
     color: #444;
@@ -161,9 +161,10 @@ img{
     margin-left: 15px;
 }
 .center_center .mapeo .desc, .center_center .monitoreo .desc{
-    font-size: 13px;
+    font-size: 11px;
     margin-top: 5px;
     margin-left: 15px;
+    padding-right: 5px;
 }
 .center_center .mapeo .ira, .center_center .monitoreo .ira{
     display: block;
