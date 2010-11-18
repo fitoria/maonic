@@ -9,6 +9,14 @@ class MaonicAdmin(admin.ModelAdmin):
             return self.model.objects.all()
         elif request.user.is_staff:
             return self.model.objects.filter(user=request.user)
+    def get_form(self, request, obj=None, ** kwargs):
+        if request.user.is_superuser:
+            form = super(MaonicAdmin, self).get_form(self, request, ** kwargs)
+        else:
+            form = super(MaonicAdmin, self).get_form(self, request, ** kwargs)
+            form.base_fields['user'].queryset = User.objects.filter(pk=request.user.pk)
+        return form
+
     filter_horizontal = ('arboles','animales','cultivos','semillas','materia_procesada','certificacion','buenas_practicas')
 
 class FamiliaAdmin(MaonicAdmin):
