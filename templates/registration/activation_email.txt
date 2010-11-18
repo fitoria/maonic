@@ -1,5 +1,8 @@
 Usted, ha solicitado registrarse para una nueva cuenta de {{site}} usando esta dirección de correo electrónico.
 
+Por favor haga clic en el siguiente enlace, si no funciona copie y pegue el enlace en su navegado favorito.
+
  http://{{site}}/accounts/activate/{{activation_key}}/
+ 
 
 Si no ha solicitado esto, usted no recibirá más mensajes de correo electrónico de nosotros, y la cuenta expirará automáticamente en {{ expiration_days }} días.
