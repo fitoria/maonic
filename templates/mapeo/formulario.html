@@ -16,19 +16,7 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/files/js/prettify.js"></script>
 <script type="text/javascript" src="/files/js/jquery.multiselect.js"></script>
-
-<script type="text/javascript" language="javascript" charset="utf-8">
-// <![CDATA[
-//$(document).ready(function(){
-   //$("rubro_cultivo").multiselect();
-//});  
-// ]]>
-
-$(function(){
-   $("select").multiselect(); 
-});
-</script>
-
+<script type="text/javascript" src="/files/js/jquery.multiselect.filter.js"></script>
 
 {% endblock %}
 {% block contenido %}
@@ -116,5 +104,110 @@ $(function(){
         </div>
     </form>
 </div>
+<script type="text/javascript">
+$(function(){
+   
+   // cultivos
+	$("#id_rubro_cultivo").multiselect({
+		//header: "Escoja los Cultivos",
+		show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Cultivos',
+		selectedText: '# seleccionados',
+		checkAllText: 'Check todos',
+		uncheckAllText: 'Uncheck todos',
 
+	});
+	
+	// arboles
+	$("#id_rubro_animales").multiselect({
+		//header: "Escoja los árboles",
+		show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Árboles',
+		selectedText: '# seleccionados',
+		checkAllText: 'Check todos',
+		uncheckAllText: 'Uncheck todos',
+	});
+	
+	// animales
+	$("#id_rubro_arboles").multiselect({
+		//header: "Escoja los animales",
+		show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Ánimales',
+		selectedText: '# seleccionados',
+		checkAllText: 'Check todos',
+		uncheckAllText: 'Uncheck todos',
+	});
+	
+	// semillas
+	$("#id_semilla").multiselect({
+		//header: "Escoja las semillas",
+		show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Semillas',
+		selectedText: '# seleccionados',
+		checkAllText: 'Check todos',
+		uncheckAllText: 'Uncheck todos',
+	});
+	
+	// materia procesada
+	$("#id_materia_procesada").multiselect({
+	    //header: "Escoja materia procesada",
+	    show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Materia procesada',
+		selectedText: '# seleccionados',
+		checkAllText: 'Check todos',
+		uncheckAllText: 'Uncheck todos',
+	});
+	
+	// buenas practicas
+	$("#id_buenas_practicas").multiselect({
+	    //header: "Escoja buenas practicas",
+	    show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Buenas prácticas',
+		selectedText: '# seleccionados',
+		checkAllText: 'Check todos',
+		uncheckAllText: 'Uncheck todos',
+	});
+	
+	// tipo organizacion
+	$("#id_tipo_organizacion").multiselect({
+	    //header: "Escoja organización",
+	    show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Tipo Organización',
+		selectedText: '# seleccionados',
+		checkAllText: 'Check todos',
+		uncheckAllText: 'Uncheck todos',
+	});
+	
+	// certificacion
+	$("#id_certificacion").multiselect({
+	    //header: "Escoja certificación",
+	    show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Certificación',
+		selectedText: '# seleccionados',
+		checkAllText: 'Check todos',
+		uncheckAllText: 'Uncheck todos',
+	});
+	
+	// area de trabajo
+	$("#id_area_trabajo").multiselect({
+	    //header: "Escoja area de trabajo",
+	    show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Area de trabajo',
+		selectedText: '# seleccionados',
+		checkAllText: 'Check todos',
+		uncheckAllText: 'Uncheck todos',
+	});
+
+
+});
+</script>
 {% endblock %}
