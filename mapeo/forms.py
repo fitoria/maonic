@@ -24,18 +24,18 @@ class FilterForm(forms.Form):
             widget = forms.CheckboxInput)
 
     #rubros
-    rubro_cultivo = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+    cultivos = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
             queryset=RubroCultivo.objects.all(), label='Rubro Cultivo', 
             required=False)
-    rubro_animales = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+    animales = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
             queryset=RubroAnimales.objects.all(), label='Rubro Animales', 
             required=False)
-    rubro_arboles = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+    arboles = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
             queryset=RubroArboles.objects.all(), label='Rubro Arboles',
             required=False)
 
     #otros filtros
-    semilla = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
+    semillas = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,
             queryset=Semilla.objects.all(), label='Semilla',
             required=False)
     materia_procesada = forms.ModelMultipleChoiceField(widget=forms.SelectMultiple,

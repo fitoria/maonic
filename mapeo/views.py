@@ -52,7 +52,8 @@ def obtener_lista_paginada(request, modelo):
 def obtener_lista(request, modelo):
     #TODO: agregr request.ajax
     lista = []
-    for objeto in model_dict[modelo].objects.all():
+    params = _get_params(request.session)
+    for objeto in model_dict[modelo].objects.filter(**params):
         if objeto.lat and objeto.lon:
             dicc = dict(nombre=objeto.nombre, id=objeto.id, 
                         lon=foat(objeto.lon) , lat=float(objeto.lat),
@@ -80,7 +81,8 @@ def formulario(request):
             #validar aca!
 
             #aburriiiiiiiiiido 
-            for coso in ('semilla', 'materia_procesada', 'buenas_practicas', 
+            for coso in ('semillas', 'materia_procesada', 'buenas_practicas', 
+                    'arboles', 'cultivos', 'animales',
                     'tipo_organizacion', 'certificacion', 'area_trabajo'):
                 request.session[coso] = form.cleaned_data[coso]
             #TODO:hacer un flash al estilo rails redigirir a mapita
@@ -93,6 +95,20 @@ def formulario(request):
             {'form': form},
             context_instance=RequestContext(request))
 
+
+def _get_params(session):
+    '''funcion interna para devolver parametros 
+    del formulario de busqueda'''
+    keys = ('semillas', 'materia_procesada', 'buenas_practicas', 
+                    'tipo_organizacion', 'certificacion', 'area_trabajo')
+    params = {}
+    for key in keys:
+        param_key = key + '__in'
+        if session[key] != []:
+            params[param_key] = session[key] 
+
+    return params
+    
 @session_required
 def mapa(request):
     return render_to_response('mapeo/mapa.html', 
