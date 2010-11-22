@@ -77,7 +77,7 @@
                     </div>
                     <div class="filtros_form">
                         <div class="filtos_label">{{form.cultivos.label}}</div>
-                        {{form.cultivo}}
+                        {{form.cultivos}}
                         <div class="filtos_label">{{form.animales.label}}</div>
                         {{form.animales}}
                         <div class="filtos_label">{{form.arboles.label}}</div>
@@ -115,7 +115,7 @@
 $(function(){
    
    // cultivos
-	$("#id_rubro_cultivo").multiselect({
+	$("#id_cultivos").multiselect({
 		//header: "Escoja los Cultivos",
 		//show: ["bounce", 200],
 		hide: ["explode", 1000],
@@ -128,7 +128,7 @@ $(function(){
 	}).multiselectfilter({label:'Buscar',placeholder:''});
 	
 	// arboles
-	$("#id_rubro_animales").multiselect({
+	$("#id_animales").multiselect({
 		//header: "Escoja los árboles",
 		//show: ["bounce", 200],
 		hide: ["explode", 1000],
@@ -141,7 +141,7 @@ $(function(){
 	}).multiselectfilter({label:'Buscar',placeholder:''});
 	
 	// animales
-	$("#id_rubro_arboles").multiselect({
+	$("#id_arboles").multiselect({
 		//header: "Escoja los animales",
 		//show: ["bounce", 200],
 		hide: ["explode", 1000],
@@ -154,7 +154,7 @@ $(function(){
 	}).multiselectfilter({label:'Buscar',placeholder:''});
 	
 	// semillas
-	$("#id_semilla").multiselect({
+	$("#id_semillas").multiselect({
 		//header: "Escoja las semillas",
 		//show: ["bounce", 200],
 		hide: ["explode", 1000],

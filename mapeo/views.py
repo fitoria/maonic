@@ -100,7 +100,8 @@ def _get_params(session):
     '''funcion interna para devolver parametros 
     del formulario de busqueda'''
     keys = ('semillas', 'materia_procesada', 'buenas_practicas', 
-                    'tipo_organizacion', 'certificacion', 'area_trabajo')
+            'arboles', 'cultivos', 'animales',
+            'tipo_organizacion', 'certificacion', 'area_trabajo')
     params = {}
     for key in keys:
         param_key = key + '__in'
