@@ -6,6 +6,7 @@ from django.utils import simplejson
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from decorators import session_required
 from django.template import RequestContext
+from django.core.exceptions import ViewDoesNotExist
 from forms import FilterForm 
 
 model_dict = {
@@ -31,7 +32,7 @@ def obtener_lista_paginada(request, modelo):
     primeras lineas de este archivo
     '''
     if request.is_ajax():
-        lista_objetos = model_dict[modelo].objects.all()
+        lista_objetos = _get_model(modelo).objects.all()
         paginator = Paginator(lista_objetos, 25)
 
         try:
@@ -53,7 +54,7 @@ def obtener_lista(request, modelo):
     #TODO: agregr request.ajax
     lista = []
     params = _get_params(request.session)
-    for objeto in model_dict[modelo].objects.filter(**params):
+    for objeto in _get_model(modelo).objects.filter(**params):
         if objeto.lat and objeto.lon:
             dicc = dict(nombre=objeto.nombre, id=objeto.id, 
                         lon=foat(objeto.lon) , lat=float(objeto.lat),
@@ -109,9 +110,22 @@ def _get_params(session):
             params[param_key] = session[key] 
 
     return params
-    
+
+def _get_model(model):
+    if model in model_dict:
+        return model_dict[model]
+    else:
+        raise ViewDoesNotExist("Tried %s in module %s Error: View not defined in VALID_VIEWS." % (vista, 'encuesta.views'))
+
 @session_required
 def mapa(request):
     return render_to_response('mapeo/mapa.html', 
             {'lista_modelos': request.session['lista_modelos']},
+            context_instance=RequestContext(request))
+
+def ficha(request, modelo, id):
+    '''Retorna ficha, plantillas cargadas dinamicamente'''
+    objeto = get_object_or_404(_get_model(modelo), id=id)
+    template_name = 'mapeo/ficha_%s.html' % modelo
+    return render_to_response(template_name, {'objeto': objeto},
             context_instance=RequestContext(request))
