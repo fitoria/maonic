@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block extratitle %}
+| Centrales | Resultados
+{% endblock %}
+{% block top %}
+<div class="nombre_modulo">
+    M&oacute;dulo de Mapeo
+</div>
+{% endblock %}
+{% block contenido %}
+<div class="full">
+  Información General</br>
+  {{objeto.nombre}}</br>
+  {{objeto.direccion}}</br>
+  {{objeto.municipio.nombre}}</br>
+  {{objeto.telefono}}</br>
+  {{objeto.celular}}</br>
+  {{objeto.email}}</br>
+  {{objeto.pagina_web}}</br>
+  {{objeto.fecha_est}}</br>
+  {{objeto.representante_legal}}</br>
+  {{objeto.representante_tecnico}}</br>
+  {{objeto.num_asociaciones}}</br>
+  {{objeto.num_cooperativas}}</br>
+  {{objeto.num_hombres}}</br>
+  {{objeto.num_mujeres}}</br>
+
+  Información detallada.</br>
+  Árboles
+  <ul>
+  {%for elemento in  objeto.arboles.all%}
+  <li>{{elemento.nombre}}</li>
+  {%endfor%}
+  </ul>
+  Animales
+  <ul>
+  {%for elemento in  objeto.animales.all%}
+  <li>{{elemento.nombre}}</li>
+  {%endfor%}
+  </ul>
+  Cultivos
+  <ul>
+  {%for elemento in  objeto.cultivos.all%}
+  <li>{{elemento.nombre}}</li>
+  {%endfor%}
+  </ul>
+  Semillas
+  <ul>
+  {%for elemento in  objeto.semillas.all%}
+  <li>{{elemento.nombre}}</li>
+  {%endfor%}
+  </ul>
+  Materia Procesada
+  <ul>
+  {%for elemento in  objeto.materia_procesada.all%}
+  <li>{{elemento.nombre}}</li>
+  {%endfor%}
+  </ul>
+  Certificacion 
+  <ul>
+  {%for elemento in  objeto.certificacion.all%}
+  <li>{{elemento.nombre}}</li>
+  {%endfor%}
+  </ul>
+  Buenas Prácticas 
+  <ul>
+  {%for elemento in  objeto.buenas_practicas.all%}
+  <li>{{elemento.nombre}}</li>
+  {%endfor%}
+  </ul>
+  Area Trabajo 
+  <ul>
+  {%for elemento in  objeto.area_trabajo.all%}
+  <li>{{elemento.nombre}}</li>
+  {%endfor%}
+  </ul>
+</div>
+{% endblock %}
