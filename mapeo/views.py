@@ -6,7 +6,7 @@ from django.utils import simplejson
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from decorators import session_required
 from django.template import RequestContext
-from django.core.exceptions import ViewDoesNotExist
+from django.core.exceptions import ViewDoesNotExist, ValidationError
 from forms import FilterForm 
 
 model_dict = {
@@ -32,7 +32,8 @@ def obtener_lista_paginada(request, modelo):
     primeras lineas de este archivo
     '''
     if request.is_ajax():
-        lista_objetos = _get_model(modelo).objects.all()
+        params = _get_params(request.session)
+        lista_objetos = _get_model(modelo, request.session).objects.filter(**params).distinct()
         paginator = Paginator(lista_objetos, 25)
 
         try:
@@ -47,27 +48,29 @@ def obtener_lista_paginada(request, modelo):
 
         #se le agrega el tipo de modelo para construir la url
         lista_objetos = [dict(objeto, modelo = modelo) for objeto 
-                in objectos.object_list().values('id', 'nombre')]
+                in objetos.object_list.values('id', 'nombre')]
         return HttpResponse(simplejson.dumps(lista_objetos), mimetype="application/json")
 
+@session_required
 def obtener_lista(request, modelo):
     #TODO: agregr request.ajax
-    lista = []
-    params = _get_params(request.session)
-    for objeto in _get_model(modelo).objects.filter(**params):
-        if objeto.lat and objeto.lon:
-            dicc = dict(nombre=objeto.nombre, id=objeto.id, 
-                        lon=foat(objeto.lon) , lat=float(objeto.lat),
-                        modelo= modelo)
-        else:
-            dicc = dict(nombre=objeto.nombre, id=objeto.id, 
-                        lon=float(objeto.municipio.longitud) , 
-                        lat=float(objeto.municipio.latitud),
-                        modelo= modelo)
-        lista.append(dicc)
+    if request.is_ajax():
+        lista = []
+        params = _get_params(request.session)
+        for objeto in _get_model(modelo).objects.filter(**params):
+            if objeto.lat and objeto.lon:
+                dicc = dict(nombre=objeto.nombre, id=objeto.id, 
+                            lon=foat(objeto.lon) , lat=float(objeto.lat),
+                            modelo= modelo)
+            else:
+                dicc = dict(nombre=objeto.nombre, id=objeto.id, 
+                            lon=float(objeto.municipio.longitud) , 
+                            lat=float(objeto.municipio.latitud),
+                            modelo= modelo)
+            lista.append(dicc)
 
-    serializado = simplejson.dumps(lista)
-    return HttpResponse(serializado, mimetype='application/json')
+        serializado = simplejson.dumps(lista)
+        return HttpResponse(serializado, mimetype='application/json')
 
 def formulario(request):
     if request.method == 'POST':
@@ -111,9 +114,16 @@ def _get_params(session):
 
     return params
 
-def _get_model(model):
+def _get_model(model, session=None):
     if model in model_dict:
-        return model_dict[model]
+        if session:
+            if model in session['lista_modelos']:
+                return model_dict[model]
+            else:
+                raise ValidationError('Modelo no esta en sesion')
+        else:
+            return model_dict[model]
+
     else:
         raise ViewDoesNotExist("Tried %s in module %s Error: View not defined in VALID_VIEWS." % (vista, 'encuesta.views'))
 
@@ -128,4 +138,26 @@ def ficha(request, modelo, id):
     objeto = get_object_or_404(_get_model(modelo), id=id)
     template_name = 'mapeo/ficha_%s.html' % modelo
     return render_to_response(template_name, {'objeto': objeto},
+            context_instance=RequestContext(request))
+
+@session_required
+def lista(request):
+    lista_modelos = request.session['lista_modelos']
+    params = _get_params(request.session)
+    dicc = {'lista_modelos': lista_modelos,
+        'familia': 0,
+        'cooperativa': 0,
+        'centrales': 0,
+        'asistencia': 0,
+        'insumo': 0,
+        'producto': 0,
+        'certificadora': 0,
+        'financiera': 0,
+        'orgpublica': 0,
+    }
+    for modelo in lista_modelos:
+        dicc[modelo] = _get_model(modelo).objects.filter(**params).count() 
+
+    return render_to_response('mapeo/lista.html', 
+            dicc,
             context_instance=RequestContext(request))
