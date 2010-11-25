@@ -156,7 +156,7 @@ def lista(request):
         'orgpublica': 0,
     }
     for modelo in lista_modelos:
-        dicc[modelo] = _get_model(modelo).objects.filter(**params).count() 
+        dicc[modelo] = _get_model(modelo).objects.filter(**params).distinct().count() 
 
     return render_to_response('mapeo/lista.html', 
             dicc,
