@@ -7,14 +7,22 @@
 <script type="text/javascript">
     function cargar_elemento(modelo, page){
       $.getJSON('/mapeo/lista/' + modelo + '/?page=' + page, function(data){
+          $('#ajustado').html('');
           if (data.length == 0){
              $('#ajustado').html('No hay datos');
            }else{
-            $.each(data, function(i, elemento){
+            $.each(data.enlaces, function(i, elemento){
                var link = '<li><a href="/mapeo/ficha/' + elemento.modelo + 
                '/' + elemento.id + '/">' + elemento.nombre + '</a></li>';
                $('#ajustado').append(link);
               }); 
+             var paginador = '<a href="#"' + 
+                             ' onClick=\'cargar_elemento("' + modelo + 
+                             '", ' +  data.ant + ')\'"> Anterior</a> |' +
+                             '<a href="#"' +
+                             ' onClick=\'cargar_elemento("' + modelo + 
+                             '", ' +  data.sig + ')\'"> Siguiente</a>'; 
+             $('#ajustado').append(paginador);
             }
         });
     }
@@ -22,7 +30,6 @@
        var lista_modelos = [{%for modelo in lista_modelos%}'{{modelo}}',{%endfor%}];
        $('.elemento_lista .change').click(function(){
           var id = $(this).parent().attr('id');
-          $('#ajustado').html('');
           cargar_elemento(id, 1);
        });
     });

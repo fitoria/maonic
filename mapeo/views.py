@@ -21,9 +21,6 @@ model_dict = {
     'orgpublica': OrgPublica,
     }
 
-def index(request):
-    pass
-
 @session_required
 def obtener_lista_paginada(request, modelo):
     '''Vista ajax para obtener lista de elementos en 
@@ -49,11 +46,13 @@ def obtener_lista_paginada(request, modelo):
         #se le agrega el tipo de modelo para construir la url
         lista_objetos = [dict(objeto, modelo = modelo) for objeto 
                 in objetos.object_list.values('id', 'nombre')]
-        return HttpResponse(simplejson.dumps(lista_objetos), mimetype="application/json")
+        resultados = dict(enlaces = lista_objetos, 
+                          sig = objetos.next_page_number(), 
+                          ant = objetos.previous_page_number())
+        return HttpResponse(simplejson.dumps(resultados), mimetype="application/json")
 
 @session_required
 def obtener_lista(request, modelo):
-    #TODO: agregr request.ajax
     if request.is_ajax():
         lista = []
         params = _get_params(request.session)
