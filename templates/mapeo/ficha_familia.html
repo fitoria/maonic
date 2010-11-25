@@ -3,65 +3,140 @@
 | Familia | Resultados
 {% endblock %}
 {% block top %}
-<div class="nombre_modulo">
+<div class="nombre_modulo pequenio">
     M&oacute;dulo de Mapeo
 </div>
 {% endblock %}
 {% block contenido %}
 <div class="full">
-  Información General</br>
-  {{objeto.nombre}}</br>
-  {{objeto.direccion}}</br>
-  {{objeto.municipio.nombre}}</br>
-  {{objeto.telefono}}</br>
-  {{objeto.celular}}</br>
-  {{objeto.email}}</br>
-  {{objeto.pagina_web}}</br>
-  {{objeto.nombre_finca}}</br>
-  {{objeto.area_finca}}</br>
-
-  Información detallada.</br>
-  Árboles
-  <ul>
-  {%for elemento in  objeto.arboles.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Animales
-  <ul>
-  {%for elemento in  objeto.animales.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Cultivos
-  <ul>
-  {%for elemento in  objeto.cultivos.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Semillas
-  <ul>
-  {%for elemento in  objeto.semillas.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Materia Procesada
-  <ul>
-  {%for elemento in  objeto.materia_procesada.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Certificacion 
-  <ul>
-  {%for elemento in  objeto.certificacion.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Buenas Prácticas 
-  <ul>
-  {%for elemento in  objeto.buenas_practicas.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
+    <div class="titulo_familia">
+        <div class="nombre_finca">{{objeto.nombre_finca}}</div>
+    </div>
+</div>
+<div class="ajustado">    
+    <div class="subtitle">Datos Generales</div>    
+    <div class="todos">
+        <div class="detalles">
+            <div class="dato">Nombre de la finca</div>
+            <div class="dato_valor">{{objeto.nombre_finca}}</div>
+            <div class="dato">Nombre de contacto</div>
+            <div class="dato_valor">{{objeto.nombre}}</div>
+            <div class="dato">Tel&eacute;fono</div>
+            <div class="dato_valor">{% if objeto.telefono %}Tel: {% endif %}{{objeto.telefono}} {% if objeto.celular %} Cel: {% endif %}{{objeto.celular}}</div>
+            <div class="dato">Email</div>
+            <div class="dato_valor">{{objeto.email}}</div>
+            {% if objeto.pagina_web %}
+            <div class="dato">Sitio web (opcional)</div>
+            <div class="dato_valor">{{objeto.pagina_web}}</div>
+            {% endif %}
+        </div>
+        <div class="detalles">
+            <div class="dato">Direccion</div>
+            <div class="dato_valor">{{objeto.direccion}}</div>
+            <div class="dato">Municipio</div>
+            <div class="dato_valor">{{objeto.municipio.nombre}}</div>
+            <div class="dato">Tama&ntilde;o</div>
+            <div class="dato_valor">{{objeto.area_finca}}</div>
+        </div>
+        <div class="detalles">
+            <div class="dato">Im&aacute;genes</div>
+            <div class="dato_valor">
+                <img class="foto" src="/files/images/img.png" alt="Foto finca">
+                <div class="explorar_fotos"><a href="#">Explorar Galeria</a></div>
+            </div>
+        </div>
+        <div class="clean"></div>
+    </div>
+    <br>
+    <div class="info_detallada">
+        <div class="todos_left">
+            <div class="subtitle">Tipo de Organizaci&oacute;n</div>
+            <div class="detalles2">
+                <ul class="details">
+                    {%for elemento in  objeto.tipo_org.all%}
+                    <li>{{elemento.nombre}}</li>
+                    {%endfor%}
+                </ul>
+                <div class="clean"></div>
+            </div>
+        </div>
+        <div class="todos_left dos">
+            <div class="subtitle">Tipo de Certificaci&oacute;n</div>
+            <div class="detalles2">
+                <ul class="details">
+                    {%for elemento in  objeto.certificacion.all%}
+                    <li>{{elemento.nombre}}</li>
+                    {%endfor%}
+                </ul>
+                <div class="clean"></div>
+            </div>
+        </div>
+        <div class="clean"></div>
+        <br>
+        <div class="todos_left">
+            <div class="litle_left uno">
+                <div class="subtitle">Rubros</div>
+                <div class="detalles2">
+                    <div class="subcategoria">&Aacute;rboles</div>
+                    <ul class="details">
+                        {%for elemento in  objeto.arboles.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                    <div class="subcategoria">Animales</div>
+                    <ul class="details">
+                        {%for elemento in  objeto.animales.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                    <div class="subcategoria">Cultivos</div>
+                    <ul class="details">
+                        {%for elemento in  objeto.cultivos.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+            </div>
+            <div class="litle_left">
+                <div class="subtitle">Semillas</div>
+                <div class="detalles2">
+                    <ul class="details">
+                        {%for elemento in  objeto.semillas.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+            </div>
+        </div>
+        <div class="todos_left dos">
+            <div class="litle_left uno">
+                <div class="subtitle">Materia Procesada</div>
+                <div class="detalles2">
+                    <ul class="details">
+                        {%for elemento in  objeto.materia_procesada.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+            </div>
+            <div class="litle_left">
+                <div class="subtitle">Buenas Pr&aacute;cticas</div>
+                <div class="detalles2">
+                    <ul class="details">
+                        {%for elemento in  objeto.buenas_practicas.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clean"></div>
+    </div>
 </div>
 {% endblock %}

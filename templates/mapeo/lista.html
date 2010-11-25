@@ -3,7 +3,6 @@
 | Mapeo | Lista
 {% endblock %}
 {% block extrahead %}
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 <script type="text/javascript">
     function cargar_elemento(modelo, page){
       $.getJSON('/mapeo/lista/' + modelo + '/?page=' + page, function(data){
@@ -43,11 +42,11 @@
 {% block contenido %}
 <div class="full">
     <div class="elemento_lista" id="familia">
-      <div class="actor_title">{{familia}}</div>
+        <div class="actor_title">{{familia}}</div>
         <div class="change">Familias <br>Productoras</div>
     </div>
     <div class="elemento_lista" id="cooperativa">
-      <div class="actor_title">{{cooperativa}}</div>
+        <div class="actor_title">{{cooperativa}}</div>
         <div class="change">Cooperativas</div>
     </div>
     <div class="elemento_lista" id="centrales">
