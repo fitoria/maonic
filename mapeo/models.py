@@ -12,7 +12,8 @@ class SelectorBase(models.Model):
         return self.nombre
 
     class Meta:
-        abstract = True 
+        abstract = True
+        ordering = ['nombre'] 
 
 class RubroCultivo(SelectorBase):
     pass
@@ -47,9 +48,9 @@ class FichaBase(models.Model):
     direccion = models.TextField()
     municipio = models.ForeignKey(Municipio)
     lat = models.DecimalField(blank=True, max_digits=8, 
-            decimal_places=2, verbose_name='latitud')
+            decimal_places=2, verbose_name='latitud', null=True)
     lon = models.DecimalField(blank=True, max_digits=8, 
-            decimal_places=2, verbose_name='longitud')
+            decimal_places=2, verbose_name='longitud', null=True)
     telefono = models.CharField(max_length=8, blank=True, null=True) 
     celular = models.CharField(max_length=8, blank=True, null=True) 
     email = models.EmailField(blank=True, null=True)
@@ -60,13 +61,13 @@ class FichaBase(models.Model):
     fecha_actualizado = models.DateTimeField(auto_now=True)
 
     #rubros genericos que estan en todos lados
-    arboles = models.ManyToManyField(RubroArboles)
-    animales = models.ManyToManyField(RubroAnimales)
-    cultivos = models.ManyToManyField(RubroCultivo)
-    semillas = models.ManyToManyField(Semilla)
-    materia_procesada = models.ManyToManyField(MateriaProcesada)
-    certificacion = models.ManyToManyField(Certificacion)
-    buenas_practicas = models.ManyToManyField(BuenasPracticas)
+    arboles = models.ManyToManyField(RubroArboles, blank=True)
+    animales = models.ManyToManyField(RubroAnimales, blank=True)
+    cultivos = models.ManyToManyField(RubroCultivo, blank=True)
+    semillas = models.ManyToManyField(Semilla, blank=True)
+    materia_procesada = models.ManyToManyField(MateriaProcesada, blank=True)
+    certificacion = models.ManyToManyField(Certificacion, blank=True)
+    buenas_practicas = models.ManyToManyField(BuenasPracticas, blank=True)
 
 
     def __unicode__(self):

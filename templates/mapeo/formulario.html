@@ -4,6 +4,19 @@
     M&oacute;dulo de Mapeo
 </div>
 {% endblock %}
+{% block extrahead %}
+
+<link rel="stylesheet" type="text/css" href="/files/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/files/css/prettify.css" />
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="/files/css/jquery.multiselect.filter.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/files/js/prettify.js"></script>
+<script type="text/javascript" src="/files/js/jquery.multiselect.js"></script>
+<script type="text/javascript" src="/files/js/jquery.multiselect.filter.js"></script>
+
+{% endblock %}
 {% block contenido %}
 <div class="ajustado">
     <form action="." method="POST">{% csrf_token %}
@@ -62,20 +75,29 @@
                     <div class="title">
                         Rubros
                     </div>
-                    <div class="filtros">
-                        {{form.rubro_cultivo}}
-                        {{form.rubro_animales}}
-                        {{form.rubro_arboles}}
+                    <div class="filtros_form">
+                        <div class="filtos_label">{{form.cultivos.label}}</div>
+                        {{form.cultivos}}
+                        <div class="filtos_label">{{form.animales.label}}</div>
+                        {{form.animales}}
+                        <div class="filtos_label">{{form.arboles.label}}</div>
+                        {{form.arboles}}
                     </div>
                     <div class="title">
                         Filtros Adicionales
                     </div>
-                    <div class="filtros">
-                        {{form.semilla}}
+                    <div class="filtros_form">
+                        <div class="filtos_label">{{form.semillas.label}}</div>
+                        {{form.semillas}}
+                        <div class="filtos_label">{{form.materia_procesada.label}}</div>
                         {{form.materia_procesada}}
+                        <div class="filtos_label">{{form.buenas_practicas.label}}</div>
                         {{form.buenas_practicas}}
+                        <div class="filtos_label">{{form.tipo_organizacion.label}}</div>
                         {{form.tipo_organizacion}}
+                        <div class="filtos_label">{{form.certificacion.label}}</div>
                         {{form.certificacion}}
+                        <div class="filtos_label">{{form.area_trabajo.label}}</div>
                         {{form.area_trabajo}}
                     </div>
                     <br>
@@ -89,4 +111,139 @@
         </div>
     </form>
 </div>
+<script type="text/javascript">
+$(function(){
+   
+   // cultivos
+	$("#id_cultivos").multiselect({
+		//header: "Escoja los Cultivos",
+		//show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Seleccione elementos',
+		selectedText: '# seleccionados',
+		checkAllText: 'Seleccionar todos',
+		uncheckAllText: 'Quitar todos',
+        minWidth:'445',
+        selectedList: 5 
+	}).multiselectfilter({label:'Buscar',placeholder:''});
+	
+	// arboles
+	$("#id_animales").multiselect({
+		//header: "Escoja los árboles",
+		//show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Seleccione elementos',
+		selectedText: '# seleccionados',
+		checkAllText: 'Seleccionar todos',
+		uncheckAllText: 'Quitar todos',
+        minWidth:'445',
+        selectedList: 5 
+	}).multiselectfilter({label:'Buscar',placeholder:''});
+	
+	// animales
+	$("#id_arboles").multiselect({
+		//header: "Escoja los animales",
+		//show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Seleccione elementos',
+		selectedText: '# seleccionados',
+		checkAllText: 'Seleccionar todos',
+		uncheckAllText: 'Quitar todos',
+        minWidth:'445',
+        selectedList: 5 
+	}).multiselectfilter({label:'Buscar',placeholder:''});
+	
+	// semillas
+	$("#id_semillas").multiselect({
+		//header: "Escoja las semillas",
+		//show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Seleccione elementos',
+		selectedText: '# seleccionados',
+		checkAllText: 'Seleccionar todos',
+		uncheckAllText: 'Quitar todos',
+        minWidth:'445',
+        selectedList: 5 
+	}).multiselectfilter({label:'Buscar',placeholder:''});
+	
+	// materia procesada
+	$("#id_materia_procesada").multiselect({
+	    //header: "Escoja materia procesada",
+	    //show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Seleccione elementos',
+		selectedText: '# seleccionados',
+		checkAllText: 'Seleccionar todos',
+		uncheckAllText: 'Quitar todos',
+        minWidth:'445',
+        selectedList: 5 
+	}).multiselectfilter({label:'Buscar',placeholder:''});
+	
+	// buenas practicas
+	$("#id_buenas_practicas").multiselect({
+	    //header: "Escoja buenas practicas",
+	    //show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Seleccione elementos',
+		selectedText: '# seleccionados',
+		checkAllText: 'Seleccionar todos',
+		uncheckAllText: 'Quitar todos',
+        minWidth:'445',
+        selectedList: 5 
+	}).multiselectfilter({label:'Buscar',placeholder:''});
+	
+	// tipo organizacion
+	$("#id_tipo_organizacion").multiselect({
+	    //header: "Escoja organización",
+	    //show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Seleccione elementos',
+		selectedText: '# seleccionados',
+		checkAllText: 'Seleccionar todos',
+		uncheckAllText: 'Quitar todos',
+        minWidth:'445',
+        selectedList: 5,
+        position: {
+            my: 'left bottom',
+            at: 'left top'
+        }
+	}).multiselectfilter({label:'Buscar',placeholder:''});
+	
+	// certificacion
+	$("#id_certificacion").multiselect({
+	    //header: "Escoja certificación",
+	    //show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Seleccione elementos',
+		selectedText: '# seleccionados',
+		checkAllText: 'Seleccionar todos',
+		uncheckAllText: 'Quitar todos',
+        minWidth:'445',
+        selectedList: 5,
+        position: {
+            my: 'left bottom',
+            at: 'left top'
+        }
+	}).multiselectfilter({label:'Buscar',placeholder:''});
+	
+	// area de trabajo
+	$("#id_area_trabajo").multiselect({
+	    //header: "Escoja area de trabajo",
+	    //show: ["bounce", 200],
+		hide: ["explode", 1000],
+		noneSelectedText: 'Seleccione elementos',
+		selectedText: '# seleccionados',
+		checkAllText: 'Seleccionar todos',
+		uncheckAllText: 'Quitar todos',
+        minWidth:'445',
+        selectedList: 5, 
+        position: {
+            my: 'left bottom',
+            at: 'left top'
+        }
+	}).multiselectfilter({label:'Buscar',placeholder:''});
+
+
+});
+</script>
 {% endblock %}
