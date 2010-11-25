@@ -3,28 +3,27 @@
 | Mapeo | Lista
 {% endblock %}
 {% block extrahead %}
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 <script type="text/javascript">
     function cargar_elemento(modelo, page){
-      $.getJSON('/mapeo/lista/' + modelo + '/?page=' + page, function(data){
-          if (data.length == 0){
-             $('#ajustado').html('No hay datos');
-           }else{
-            $.each(data, function(i, elemento){
-               var link = '<li><a href="/mapeo/ficha/' + elemento.modelo + 
-               '/' + elemento.id + '/">' + elemento.nombre + '</a></li>';
-               $('#ajustado').append(link);
-              }); 
+        $.getJSON('/mapeo/lista/' + modelo + '/?page=' + page, function(data){
+            if (data.length == 0){
+                $('#ajustado').html('No hay datos');
+            }else{
+                $.each(data, function(i, elemento){
+                    var link = '<li><a href="/mapeo/ficha/' + elemento.modelo +
+                        '/' + elemento.id + '/">' + elemento.nombre + '</a></li>';
+                    $('#ajustado').append(link);
+                });
             }
         });
     }
     $(document).ready(function(){
-       var lista_modelos = [{%for modelo in lista_modelos%}'{{modelo}}',{%endfor%}];
-       $('.elemento_lista .change').click(function(){
-          var id = $(this).parent().attr('id');
-          $('#ajustado').html('');
-          cargar_elemento(id, 1);
-       });
+        var lista_modelos = [{%for modelo in lista_modelos%}'{{modelo}}',{%endfor%}];
+        $('.elemento_lista .change').click(function(){
+            var id = $(this).parent().attr('id');
+            $('#ajustado').html('');
+            cargar_elemento(id, 1);
+        });
     });
 </script>
 {% endblock %}
@@ -36,11 +35,11 @@
 {% block contenido %}
 <div class="full">
     <div class="elemento_lista" id="familia">
-      <div class="actor_title">{{familia}}</div>
+        <div class="actor_title">{{familia}}</div>
         <div class="change">Familias <br>Productoras</div>
     </div>
     <div class="elemento_lista" id="cooperativa">
-      <div class="actor_title">{{cooperativa}}</div>
+        <div class="actor_title">{{cooperativa}}</div>
         <div class="change">Cooperativas</div>
     </div>
     <div class="elemento_lista" id="centrales">

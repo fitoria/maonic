@@ -165,6 +165,7 @@ img{
     margin-top: 5px;
     margin-left: 15px;
     padding-right: 5px;
+    height: 60px;
 }
 .center_center .mapeo .ira, .center_center .monitoreo .ira{
     display: block;
@@ -221,7 +222,6 @@ img{
     margin-left: 25px;
     margin-top: 15px;
     float: left;
-
 }
 .paso1, .paso2, .paso3{
     float: left;
@@ -457,4 +457,113 @@ color:#9ea925;
 
 .ui-multiselect-filter input {
     width: 150px;
+}
+.titulo_familia{
+    background: #d9dc7c;
+    height: 50px;
+}
+.titulo_cooperativa{
+    background: #c39673;
+    height: 50px;
+}
+.titulo_asistencia{
+    background: #eddd49;
+    height: 50px;
+}
+.nombre_finca{
+    font-size: 20px;
+    color: #343434;
+    margin-left: 20px;
+    line-height: 50px;
+    font-weight: bold;
+}
+.subtitle{
+    font-size: 18px;
+    color: #595959;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.todos{
+    background: #fff;
+}
+.detalles{
+    margin-top: 5px;    
+    padding: 10px;
+    width: 288px;
+    float: left;    
+}
+.dato{
+    font-size: 14px;
+    color: #9ea925;
+    font-weight: bold;
+    border-bottom: 1px #aaa solid;    
+}
+.dato_valor{
+    color: #6a6a6a;
+    font-size: 13px;
+    margin-bottom: 8px;
+    margin-top: 3px;
+}
+.todos_left{    
+    float: left;
+    width: 460px;
+}
+.dos{
+    margin-left: 10px;    
+}
+.detalles2{
+    background: #fff;
+    margin-top: 5px;
+    padding: 10px;
+}
+ul.details{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ul.details li{
+    font-size: 11px;
+    color: #3a3a3a;
+    background: #f8f8a0 url(/files/images/li_back.png) no-repeat left;
+    display: block;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+}
+.litle_left{
+    float: left;
+    width: 225px;
+}
+.uno{
+    margin-right: 10px;
+}
+.subcategoria{
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+.foto{
+    padding: 5px;
+    background: #aaa;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.explorar_fotos{
+    background: url(/files/images/explorar_back.png) no-repeat bottom;
+    height: 24px;
+    width: 123px;
+    margin-left: 35px;
+}
+.explorar_fotos a{
+    color: #424242;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 24px;
+    padding-left: 30px;
+}
+.explorar_fotos a:hover{
+    text-decoration: underline;
 }
