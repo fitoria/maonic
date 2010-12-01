@@ -4,18 +4,18 @@
 {% endblock %}
 {% block extrahead %}
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="/files/js/markerclusterer.js"></script>
+<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>
 <script type="text/javascript">
     // Aplicar QuickSearch a la tabla y la lista
     $(document).ready(function () {
         var lista_modelos = [{%for modelo in lista_modelos%}'{{modelo}}',{%endfor%}];
         var map;
-        var markers = new Array();
+        var markers = [];
         var infowindow = new google.maps.InfoWindow();
         var myLatlng = new google.maps.LatLng(13,-85);
         var myOptions = {
             zoom: 7,
-            mapTypeControl: false,
+            mapTypeControl: true,
             center: myLatlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
@@ -32,18 +32,15 @@
                     position: new google.maps.LatLng(elemento.lat, elemento.lon),
                     map: map,
                     title: item.nombre,
-                    icon: image
+                   // icon: image
                     });
                     markers.push(marker);
-                    /*google.maps.event.addListener(marker, 'click', function() {
+                    google.maps.event.addListener(marker, 'click', function() {
                       infowindow.open(map, marker);
-                      var text = '<div class="infowindow">'+item.municipio+'<br><ul>';
-                      $.each(item.proyectos, function(i, item){
-                          text += '<li><a style="color:#7F7F7F;"href="/proyecto/' + item.id +'/">' + '['+item.organizacion__nombre_corto + '] ' + item.nombre + '</a></li>';
-                      });
-                      text += '</ul></div>';
+                      var text = '<div class="infowindow">'+elemento.nombre+'<br><ul>';
+                      text += '<li><a href="/mapeo/ficha/' + item + '/' + elemento.id + '">Ver ficha</a></li></ul></div>';
                       infowindow.setContent(text);
-                    });*/
+                    });
                 });
             });
         });

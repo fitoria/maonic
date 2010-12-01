@@ -2,6 +2,21 @@
 from django.db import models
 from django.contrib.auth.models import User
 from lugar.models import Municipio
+from thumbs import ImageWithThumbsField
+#Galeria de foto.
+FOTOS_SIZES = ((640, 480),)
+
+class Galeria(models.Model):
+    '''Modelo de galeria de foto, solo se permite 5 fotos'''
+    nombre = models.CharField(max_length=100)
+    foto1 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+    foto2 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+    foto3 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+    foto4 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+    foto5 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+
+    def __unicode__(self):
+        return self.nombre
 
 class SelectorBase(models.Model):
     '''modelo abstracto para semilla, materia, 
@@ -69,6 +84,8 @@ class FichaBase(models.Model):
     certificacion = models.ManyToManyField(Certificacion, blank=True)
     buenas_practicas = models.ManyToManyField(BuenasPracticas, blank=True)
 
+    #Fotos
+    galeria = models.ForeignKey(Galeria, null=True)
 
     def __unicode__(self):
         return self.nombre
