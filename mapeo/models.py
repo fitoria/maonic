@@ -8,7 +8,8 @@ FOTOS_SIZES = ((640, 480),)
 
 class Galeria(models.Model):
     '''Modelo de galeria de foto, solo se permite 5 fotos'''
-    nombre = models.CharField(max_length=100)
+    nombre = models.CharField(max_length=140)
+    user = models.ForeignKey(User)
     foto1 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
     foto2 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
     foto3 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 

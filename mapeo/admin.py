@@ -19,6 +19,9 @@ class MaonicAdmin(admin.ModelAdmin):
 
     filter_horizontal = ('arboles','animales','cultivos','semillas','materia_procesada','certificacion','buenas_practicas')
 
+class GaleriaAdmin(MaonicAdmin):
+    filter_horizontal = [] 
+
 class FamiliaAdmin(MaonicAdmin):
     filter_horizontal = ('tipo_org','arboles','animales','cultivos','semillas','materia_procesada','certificacion','buenas_practicas')
 
@@ -79,6 +82,7 @@ admin.site.register(Financiera,FinancieraAdmin)
 
 #admin.site.register(OrgPublica, MaonicAdmin)
 admin.site.register(OrgPublica,OrgPublicaAdmin)
+admin.site.register(Galeria, GaleriaAdmin)
 
 admin.site.register(RubroCultivo)
 admin.site.register(RubroArboles)
