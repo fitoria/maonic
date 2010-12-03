@@ -3,7 +3,13 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 from models import *
 
+class GaleriaInline(admin.StackedInline):
+    model = Galeria
+    max_num = 1
+
 class MaonicAdmin(admin.ModelAdmin):
+    inlines = [GaleriaInline] 
+
     def queryset(self, request):
         if request.user.is_superuser:
             return self.model.objects.all()
@@ -15,12 +21,10 @@ class MaonicAdmin(admin.ModelAdmin):
         else:
             form = super(MaonicAdmin, self).get_form(self, request, ** kwargs)
             form.base_fields['user'].queryset = User.objects.filter(pk=request.user.pk)
+            #form.base_fields['galeria'].queryset = Galeria.objects.filter(user=request.user)
         return form
 
     filter_horizontal = ('arboles','animales','cultivos','semillas','materia_procesada','certificacion','buenas_practicas')
-
-class GaleriaAdmin(MaonicAdmin):
-    filter_horizontal = [] 
 
 class FamiliaAdmin(MaonicAdmin):
     filter_horizontal = ('tipo_org','arboles','animales','cultivos','semillas','materia_procesada','certificacion','buenas_practicas')
@@ -82,7 +86,6 @@ admin.site.register(Financiera,FinancieraAdmin)
 
 #admin.site.register(OrgPublica, MaonicAdmin)
 admin.site.register(OrgPublica,OrgPublicaAdmin)
-admin.site.register(Galeria, GaleriaAdmin)
 
 admin.site.register(RubroCultivo)
 admin.site.register(RubroArboles)
@@ -92,3 +95,4 @@ admin.site.register(MateriaProcesada)
 admin.site.register(BuenasPracticas)
 admin.site.register(TipoOrganizacion)
 admin.site.register(AreaTrabajo)
+admin.site.register(Galeria)

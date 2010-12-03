@@ -3,5 +3,6 @@
 settings_local.py
 *.sqlite3
 nbproject/
+media/galeria/
 *.db
 *.pl
