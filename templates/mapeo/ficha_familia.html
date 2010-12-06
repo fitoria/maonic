@@ -28,11 +28,11 @@
             <div class="dato_valor">{{objeto.email}}</div>
             {% if objeto.pagina_web %}
             <div class="dato">Sitio web (opcional)</div>
-            <div class="dato_valor"><a href="{{objeto.pagina_web}}">{{objeto.pagina_web}}</div>
+            <div class="dato_valor"><a href="{{objeto.pagina_web}}">{{objeto.pagina_web}}</a></div>
             {% endif %}
         </div>
         <div class="detalles">
-            <div class="dato">Direccion</div>
+            <div class="dato">Dirección</div>
             <div class="dato_valor">{{objeto.direccion}}</div>
             <div class="dato">Municipio</div>
             <div class="dato_valor">{{objeto.municipio.nombre}}</div>
@@ -42,8 +42,8 @@
         <div class="detalles">
             <div class="dato">Im&aacute;genes</div>
             <div class="dato_valor">
-                {%if objeto.galeria %}
-                <img class="foto" src="{{objeto.galeria.get_thumb}}" alt="Foto finca">
+                {%if objeto.foto1%}
+                <img class="foto" src="{{objeto.foto1.url_227x154}}" alt="Foto finca">
                 {%else%}
                 <img class="foto" src="/files/images/img.png" alt="Foto finca">
                 {%endif%}

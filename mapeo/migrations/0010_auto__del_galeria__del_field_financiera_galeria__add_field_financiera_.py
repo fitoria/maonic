@@ -8,21 +8,347 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         
-        # Deleting field 'Galeria.nombre'
-        db.delete_column('mapeo_galeria', 'nombre')
+        # Deleting model 'Galeria'
+        db.delete_table('mapeo_galeria')
 
-        # Adding field 'Galeria.user'
-        db.add_column('mapeo_galeria', 'user', self.gf('django.db.models.fields.related.ForeignKey')(default='admin', to=orm['auth.User']), keep_default=False)
+        # Deleting field 'Financiera.galeria'
+        db.delete_column('mapeo_financiera', 'galeria_id')
+
+        # Adding field 'Financiera.foto1'
+        db.add_column('mapeo_financiera', 'foto1', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Financiera.foto2'
+        db.add_column('mapeo_financiera', 'foto2', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Financiera.foto3'
+        db.add_column('mapeo_financiera', 'foto3', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Financiera.foto4'
+        db.add_column('mapeo_financiera', 'foto4', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Financiera.foto5'
+        db.add_column('mapeo_financiera', 'foto5', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Deleting field 'Centrales.galeria'
+        db.delete_column('mapeo_centrales', 'galeria_id')
+
+        # Adding field 'Centrales.foto1'
+        db.add_column('mapeo_centrales', 'foto1', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Centrales.foto2'
+        db.add_column('mapeo_centrales', 'foto2', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Centrales.foto3'
+        db.add_column('mapeo_centrales', 'foto3', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Centrales.foto4'
+        db.add_column('mapeo_centrales', 'foto4', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Centrales.foto5'
+        db.add_column('mapeo_centrales', 'foto5', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Deleting field 'AsistenciaTecnica.galeria'
+        db.delete_column('mapeo_asistenciatecnica', 'galeria_id')
+
+        # Adding field 'AsistenciaTecnica.foto1'
+        db.add_column('mapeo_asistenciatecnica', 'foto1', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'AsistenciaTecnica.foto2'
+        db.add_column('mapeo_asistenciatecnica', 'foto2', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'AsistenciaTecnica.foto3'
+        db.add_column('mapeo_asistenciatecnica', 'foto3', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'AsistenciaTecnica.foto4'
+        db.add_column('mapeo_asistenciatecnica', 'foto4', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'AsistenciaTecnica.foto5'
+        db.add_column('mapeo_asistenciatecnica', 'foto5', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Deleting field 'Familia.galeria'
+        db.delete_column('mapeo_familia', 'galeria_id')
+
+        # Adding field 'Familia.foto1'
+        db.add_column('mapeo_familia', 'foto1', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Familia.foto2'
+        db.add_column('mapeo_familia', 'foto2', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Familia.foto3'
+        db.add_column('mapeo_familia', 'foto3', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Familia.foto4'
+        db.add_column('mapeo_familia', 'foto4', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Familia.foto5'
+        db.add_column('mapeo_familia', 'foto5', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Deleting field 'ComProducto.galeria'
+        db.delete_column('mapeo_comproducto', 'galeria_id')
+
+        # Adding field 'ComProducto.foto1'
+        db.add_column('mapeo_comproducto', 'foto1', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'ComProducto.foto2'
+        db.add_column('mapeo_comproducto', 'foto2', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'ComProducto.foto3'
+        db.add_column('mapeo_comproducto', 'foto3', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'ComProducto.foto4'
+        db.add_column('mapeo_comproducto', 'foto4', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'ComProducto.foto5'
+        db.add_column('mapeo_comproducto', 'foto5', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Deleting field 'OrgPublica.galeria'
+        db.delete_column('mapeo_orgpublica', 'galeria_id')
+
+        # Adding field 'OrgPublica.foto1'
+        db.add_column('mapeo_orgpublica', 'foto1', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'OrgPublica.foto2'
+        db.add_column('mapeo_orgpublica', 'foto2', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'OrgPublica.foto3'
+        db.add_column('mapeo_orgpublica', 'foto3', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'OrgPublica.foto4'
+        db.add_column('mapeo_orgpublica', 'foto4', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'OrgPublica.foto5'
+        db.add_column('mapeo_orgpublica', 'foto5', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Deleting field 'Certificadora.galeria'
+        db.delete_column('mapeo_certificadora', 'galeria_id')
+
+        # Adding field 'Certificadora.foto1'
+        db.add_column('mapeo_certificadora', 'foto1', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Certificadora.foto2'
+        db.add_column('mapeo_certificadora', 'foto2', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Certificadora.foto3'
+        db.add_column('mapeo_certificadora', 'foto3', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Certificadora.foto4'
+        db.add_column('mapeo_certificadora', 'foto4', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Certificadora.foto5'
+        db.add_column('mapeo_certificadora', 'foto5', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Deleting field 'Cooperativa.galeria'
+        db.delete_column('mapeo_cooperativa', 'galeria_id')
+
+        # Adding field 'Cooperativa.foto1'
+        db.add_column('mapeo_cooperativa', 'foto1', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Cooperativa.foto2'
+        db.add_column('mapeo_cooperativa', 'foto2', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Cooperativa.foto3'
+        db.add_column('mapeo_cooperativa', 'foto3', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Cooperativa.foto4'
+        db.add_column('mapeo_cooperativa', 'foto4', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'Cooperativa.foto5'
+        db.add_column('mapeo_cooperativa', 'foto5', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Deleting field 'ComInsumo.galeria'
+        db.delete_column('mapeo_cominsumo', 'galeria_id')
+
+        # Adding field 'ComInsumo.foto1'
+        db.add_column('mapeo_cominsumo', 'foto1', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'ComInsumo.foto2'
+        db.add_column('mapeo_cominsumo', 'foto2', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'ComInsumo.foto3'
+        db.add_column('mapeo_cominsumo', 'foto3', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'ComInsumo.foto4'
+        db.add_column('mapeo_cominsumo', 'foto4', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
+
+        # Adding field 'ComInsumo.foto5'
+        db.add_column('mapeo_cominsumo', 'foto5', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True), keep_default=False)
 
 
     def backwards(self, orm):
         
-        # We cannot add back in field 'Galeria.nombre'
-        raise RuntimeError(
-            "Cannot reverse this migration. 'Galeria.nombre' and its values cannot be restored.")
+        # Adding model 'Galeria'
+        db.create_table('mapeo_galeria', (
+            ('foto5', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True)),
+            ('foto3', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True)),
+            ('foto2', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True)),
+            ('foto1', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True)),
+            ('user', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
+            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('foto4', self.gf('maonic.mapeo.thumbs.ImageWithThumbsField')(max_length=100, null=True, blank=True)),
+        ))
+        db.send_create_signal('mapeo', ['Galeria'])
 
-        # Deleting field 'Galeria.user'
-        db.delete_column('mapeo_galeria', 'user_id')
+        # Adding field 'Financiera.galeria'
+        db.add_column('mapeo_financiera', 'galeria', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['mapeo.Galeria'], null=True), keep_default=False)
+
+        # Deleting field 'Financiera.foto1'
+        db.delete_column('mapeo_financiera', 'foto1')
+
+        # Deleting field 'Financiera.foto2'
+        db.delete_column('mapeo_financiera', 'foto2')
+
+        # Deleting field 'Financiera.foto3'
+        db.delete_column('mapeo_financiera', 'foto3')
+
+        # Deleting field 'Financiera.foto4'
+        db.delete_column('mapeo_financiera', 'foto4')
+
+        # Deleting field 'Financiera.foto5'
+        db.delete_column('mapeo_financiera', 'foto5')
+
+        # Adding field 'Centrales.galeria'
+        db.add_column('mapeo_centrales', 'galeria', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['mapeo.Galeria'], null=True), keep_default=False)
+
+        # Deleting field 'Centrales.foto1'
+        db.delete_column('mapeo_centrales', 'foto1')
+
+        # Deleting field 'Centrales.foto2'
+        db.delete_column('mapeo_centrales', 'foto2')
+
+        # Deleting field 'Centrales.foto3'
+        db.delete_column('mapeo_centrales', 'foto3')
+
+        # Deleting field 'Centrales.foto4'
+        db.delete_column('mapeo_centrales', 'foto4')
+
+        # Deleting field 'Centrales.foto5'
+        db.delete_column('mapeo_centrales', 'foto5')
+
+        # Adding field 'AsistenciaTecnica.galeria'
+        db.add_column('mapeo_asistenciatecnica', 'galeria', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['mapeo.Galeria'], null=True), keep_default=False)
+
+        # Deleting field 'AsistenciaTecnica.foto1'
+        db.delete_column('mapeo_asistenciatecnica', 'foto1')
+
+        # Deleting field 'AsistenciaTecnica.foto2'
+        db.delete_column('mapeo_asistenciatecnica', 'foto2')
+
+        # Deleting field 'AsistenciaTecnica.foto3'
+        db.delete_column('mapeo_asistenciatecnica', 'foto3')
+
+        # Deleting field 'AsistenciaTecnica.foto4'
+        db.delete_column('mapeo_asistenciatecnica', 'foto4')
+
+        # Deleting field 'AsistenciaTecnica.foto5'
+        db.delete_column('mapeo_asistenciatecnica', 'foto5')
+
+        # Adding field 'Familia.galeria'
+        db.add_column('mapeo_familia', 'galeria', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['mapeo.Galeria'], null=True), keep_default=False)
+
+        # Deleting field 'Familia.foto1'
+        db.delete_column('mapeo_familia', 'foto1')
+
+        # Deleting field 'Familia.foto2'
+        db.delete_column('mapeo_familia', 'foto2')
+
+        # Deleting field 'Familia.foto3'
+        db.delete_column('mapeo_familia', 'foto3')
+
+        # Deleting field 'Familia.foto4'
+        db.delete_column('mapeo_familia', 'foto4')
+
+        # Deleting field 'Familia.foto5'
+        db.delete_column('mapeo_familia', 'foto5')
+
+        # Adding field 'ComProducto.galeria'
+        db.add_column('mapeo_comproducto', 'galeria', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['mapeo.Galeria'], null=True), keep_default=False)
+
+        # Deleting field 'ComProducto.foto1'
+        db.delete_column('mapeo_comproducto', 'foto1')
+
+        # Deleting field 'ComProducto.foto2'
+        db.delete_column('mapeo_comproducto', 'foto2')
+
+        # Deleting field 'ComProducto.foto3'
+        db.delete_column('mapeo_comproducto', 'foto3')
+
+        # Deleting field 'ComProducto.foto4'
+        db.delete_column('mapeo_comproducto', 'foto4')
+
+        # Deleting field 'ComProducto.foto5'
+        db.delete_column('mapeo_comproducto', 'foto5')
+
+        # Adding field 'OrgPublica.galeria'
+        db.add_column('mapeo_orgpublica', 'galeria', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['mapeo.Galeria'], null=True), keep_default=False)
+
+        # Deleting field 'OrgPublica.foto1'
+        db.delete_column('mapeo_orgpublica', 'foto1')
+
+        # Deleting field 'OrgPublica.foto2'
+        db.delete_column('mapeo_orgpublica', 'foto2')
+
+        # Deleting field 'OrgPublica.foto3'
+        db.delete_column('mapeo_orgpublica', 'foto3')
+
+        # Deleting field 'OrgPublica.foto4'
+        db.delete_column('mapeo_orgpublica', 'foto4')
+
+        # Deleting field 'OrgPublica.foto5'
+        db.delete_column('mapeo_orgpublica', 'foto5')
+
+        # Adding field 'Certificadora.galeria'
+        db.add_column('mapeo_certificadora', 'galeria', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['mapeo.Galeria'], null=True), keep_default=False)
+
+        # Deleting field 'Certificadora.foto1'
+        db.delete_column('mapeo_certificadora', 'foto1')
+
+        # Deleting field 'Certificadora.foto2'
+        db.delete_column('mapeo_certificadora', 'foto2')
+
+        # Deleting field 'Certificadora.foto3'
+        db.delete_column('mapeo_certificadora', 'foto3')
+
+        # Deleting field 'Certificadora.foto4'
+        db.delete_column('mapeo_certificadora', 'foto4')
+
+        # Deleting field 'Certificadora.foto5'
+        db.delete_column('mapeo_certificadora', 'foto5')
+
+        # Adding field 'Cooperativa.galeria'
+        db.add_column('mapeo_cooperativa', 'galeria', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['mapeo.Galeria'], null=True), keep_default=False)
+
+        # Deleting field 'Cooperativa.foto1'
+        db.delete_column('mapeo_cooperativa', 'foto1')
+
+        # Deleting field 'Cooperativa.foto2'
+        db.delete_column('mapeo_cooperativa', 'foto2')
+
+        # Deleting field 'Cooperativa.foto3'
+        db.delete_column('mapeo_cooperativa', 'foto3')
+
+        # Deleting field 'Cooperativa.foto4'
+        db.delete_column('mapeo_cooperativa', 'foto4')
+
+        # Deleting field 'Cooperativa.foto5'
+        db.delete_column('mapeo_cooperativa', 'foto5')
+
+        # Adding field 'ComInsumo.galeria'
+        db.add_column('mapeo_cominsumo', 'galeria', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['mapeo.Galeria'], null=True), keep_default=False)
+
+        # Deleting field 'ComInsumo.foto1'
+        db.delete_column('mapeo_cominsumo', 'foto1')
+
+        # Deleting field 'ComInsumo.foto2'
+        db.delete_column('mapeo_cominsumo', 'foto2')
+
+        # Deleting field 'ComInsumo.foto3'
+        db.delete_column('mapeo_cominsumo', 'foto3')
+
+        # Deleting field 'ComInsumo.foto4'
+        db.delete_column('mapeo_cominsumo', 'foto4')
+
+        # Deleting field 'ComInsumo.foto5'
+        db.delete_column('mapeo_cominsumo', 'foto5')
 
 
     models = {
@@ -97,7 +423,11 @@ class Migration(SchemaMigration):
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'null': 'True', 'blank': 'True'}),
             'fecha_actualizado': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
             'fecha_agregado': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
-            'galeria': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['mapeo.Galeria']", 'null': 'True'}),
+            'foto1': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto2': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto3': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto4': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto5': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'lat': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
             'lon': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
@@ -130,7 +460,11 @@ class Migration(SchemaMigration):
             'fecha_actualizado': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
             'fecha_agregado': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             'fecha_est': ('django.db.models.fields.DateField', [], {}),
-            'galeria': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['mapeo.Galeria']", 'null': 'True'}),
+            'foto1': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto2': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto3': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto4': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto5': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'lat': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
             'lon': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
@@ -166,7 +500,11 @@ class Migration(SchemaMigration):
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'null': 'True', 'blank': 'True'}),
             'fecha_actualizado': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
             'fecha_agregado': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
-            'galeria': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['mapeo.Galeria']", 'null': 'True'}),
+            'foto1': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto2': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto3': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto4': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto5': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'lat': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
             'lon': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
@@ -193,7 +531,11 @@ class Migration(SchemaMigration):
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'null': 'True', 'blank': 'True'}),
             'fecha_actualizado': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
             'fecha_agregado': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
-            'galeria': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['mapeo.Galeria']", 'null': 'True'}),
+            'foto1': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto2': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto3': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto4': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto5': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'lat': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
             'lon': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
@@ -220,7 +562,11 @@ class Migration(SchemaMigration):
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'null': 'True', 'blank': 'True'}),
             'fecha_actualizado': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
             'fecha_agregado': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
-            'galeria': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['mapeo.Galeria']", 'null': 'True'}),
+            'foto1': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto2': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto3': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto4': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto5': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'lat': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
             'lon': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
@@ -248,7 +594,11 @@ class Migration(SchemaMigration):
             'fecha_actualizado': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
             'fecha_agregado': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             'fecha_est': ('django.db.models.fields.DateField', [], {}),
-            'galeria': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['mapeo.Galeria']", 'null': 'True'}),
+            'foto1': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto2': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto3': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto4': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto5': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'lat': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
             'lon': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
@@ -277,7 +627,11 @@ class Migration(SchemaMigration):
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'null': 'True', 'blank': 'True'}),
             'fecha_actualizado': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
             'fecha_agregado': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
-            'galeria': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['mapeo.Galeria']", 'null': 'True'}),
+            'foto1': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto2': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto3': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto4': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto5': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'lat': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
             'lon': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
@@ -304,7 +658,11 @@ class Migration(SchemaMigration):
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'null': 'True', 'blank': 'True'}),
             'fecha_actualizado': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
             'fecha_agregado': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
-            'galeria': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['mapeo.Galeria']", 'null': 'True'}),
+            'foto1': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto2': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto3': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto4': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto5': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'lat': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
             'lon': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
@@ -316,16 +674,6 @@ class Migration(SchemaMigration):
             'semillas': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['mapeo.Semilla']", 'symmetrical': 'False', 'blank': 'True'}),
             'telefono': ('django.db.models.fields.CharField', [], {'max_length': '8', 'null': 'True', 'blank': 'True'}),
             'tipo_cliente': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['mapeo.TipoOrganizacion']", 'symmetrical': 'False'}),
-            'user': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['auth.User']"})
-        },
-        'mapeo.galeria': {
-            'Meta': {'object_name': 'Galeria'},
-            'foto1': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
-            'foto2': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
-            'foto3': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
-            'foto4': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
-            'foto5': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'user': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['auth.User']"})
         },
         'mapeo.materiaprocesada': {
@@ -346,7 +694,11 @@ class Migration(SchemaMigration):
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'null': 'True', 'blank': 'True'}),
             'fecha_actualizado': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
             'fecha_agregado': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
-            'galeria': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['mapeo.Galeria']", 'null': 'True'}),
+            'foto1': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto2': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto3': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto4': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
+            'foto5': ('maonic.mapeo.thumbs.ImageWithThumbsField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'lat': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),
             'lon': ('django.db.models.fields.DecimalField', [], {'null': 'True', 'max_digits': '8', 'decimal_places': '2', 'blank': 'True'}),

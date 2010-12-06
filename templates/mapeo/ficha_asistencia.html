@@ -26,10 +26,12 @@
             <div class="dato_valor">{{objeto.email}}</div>
             {% if objeto.pagina_web %}
             <div class="dato">Sitio web (opcional)</div>
-            <div class="dato_valor">{{objeto.pagina_web}}</div>
+            <div class="dato_valor"><a href="{{objeto.pagina_web}}">{{objeto.pagina_web}}</a></div>
             {% endif %}
         </div>
         <div class="detalles">
+            <div class="dato">Dirección</div>
+            <div class="dato_valor">{{objeto.direccion}}</div>
             <div class="dato">Provee asistencia desde</div>
             <div class="dato_valor">{{objeto.desde}} a&ntilde;os</div>
             <div class="dato">Promedio de fincas atendidas</div>
@@ -40,7 +42,11 @@
         <div class="detalles">
             <div class="dato">Im&aacute;genes</div>
             <div class="dato_valor">
+                {%if objeto.foto1%}
+                <img class="foto" src="{{objeto.foto1.url_227x154}}" alt="Foto finca">
+                {%else%}
                 <img class="foto" src="/files/images/img.png" alt="Foto finca">
+                {%endif%}
                 <div class="explorar_fotos"><a href="#">Explorar Galeria</a></div>
             </div>
         </div>

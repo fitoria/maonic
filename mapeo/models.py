@@ -6,21 +6,21 @@ from thumbs import ImageWithThumbsField
 #Galeria de foto.
 FOTOS_SIZES = ((640, 480), (227, 154))
 
-class Galeria(models.Model):
-    '''Modelo de galeria de foto, solo se permite 5 fotos'''
-    nombre = models.CharField(max_length=140)
-    user = models.ForeignKey(User)
-    foto1 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/') 
-    foto2 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
-    foto3 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
-    foto4 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
-    foto5 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
-
-    def __unicode__(self):
-        return self.nombre
-    
-    def get_thumb(self):
-        return self.foto1.url_227x154
+#class Galeria(models.Model):
+#    '''Modelo de galeria de foto, solo se permite 5 fotos'''
+#    nombre = models.CharField(max_length=140)
+#    user = models.ForeignKey(User)
+#    foto1 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/') 
+#    foto2 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+#    foto3 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+#    foto4 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+#    foto5 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+#
+#    def __unicode__(self):
+#        return self.nombre
+#    
+#    def get_thumb(self):
+#        return self.foto1.url_227x154
 
 class SelectorBase(models.Model):
     '''modelo abstracto para semilla, materia, 
@@ -89,7 +89,11 @@ class FichaBase(models.Model):
     buenas_practicas = models.ManyToManyField(BuenasPracticas, blank=True)
 
     #Fotos
-    galeria = models.ForeignKey(Galeria, null=True)
+    foto1 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+    foto2 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+    foto3 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+    foto4 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
+    foto5 = ImageWithThumbsField(sizes = FOTOS_SIZES, upload_to = 'galeria/', blank=True, null=True) 
 
     def __unicode__(self):
         return self.nombre
