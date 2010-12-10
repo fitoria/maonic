@@ -1,0 +1,14 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type='text/javascript'>
+  function cambiar_foto(url){
+    $("#foto").attr({'src': url});
+  }
+</script>
+
+<img src="{{objeto.foto1.url_640x480}}" id="foto"/>
+
+{%if objeto.foto1%}<a href="#" onClick="cambiar_foto('{{objeto.foto1.url_640x480}}')">Foto 1</a>{%endif%}
+{%if objeto.foto2%}<a href="#" onClick="cambiar_foto('{{objeto.foto2.url_640x480}}')">Foto 2</a>{%endif%}
+{%if objeto.foto3%}<a href="#" onClick="cambiar_foto('{{objeto.foto3.url_640x480}}')">Foto 3</a>{%endif%}
+{%if objeto.foto4%}<a href="#" onClick="cambiar_foto('{{objeto.foto4.url_640x480}}')">Foto 4</a>{%endif%}
+{%if objeto.foto5%}<a href="#" onClick="cambiar_foto('{{objeto.foto5.url_640x480}}')">Foto 5</a>{%endif%}

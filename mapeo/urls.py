@@ -13,4 +13,5 @@ urlpatterns = patterns('maonic.mapeo.views',
     (r'^mapa/$', 'mapa'),
     (r'^mapa/(?P<modelo>\w+)/$', 'obtener_lista'),
     (r'^ficha/(?P<modelo>\w+)/(?P<id>\d+)/$', 'ficha'),
+    (r'^ficha/galeria/(?P<modelo>\w+)/(?P<id>\d+)/$', 'galeria'),
 )

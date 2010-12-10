@@ -139,10 +139,10 @@ def ficha(request, modelo, id):
     return render_to_response(template_name, {'objeto': objeto},
             context_instance=RequestContext(request))
 
-def galeria(request, id):
+def galeria(request, modelo, id):
     '''Retorna vista a galeria de fotos'''
-    objeto = get_object_or_404(Galeria, id=id)
-    return render_to_response('mapeo/galeria.html', {'galeria': objeto},
+    objeto = get_object_or_404(_get_model(modelo), id=id)
+    return render_to_response('mapeo/galeria.html', {'objeto': objeto},
             context_instance=RequestContext(request))
 
 @session_required
