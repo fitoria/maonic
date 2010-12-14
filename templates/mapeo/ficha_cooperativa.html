@@ -1,4 +1,15 @@
 {% extends "base.html" %}
+{%block extrahead%}
+<script type="text/javascript" src="{{MEDIA_URL}}js/jquery.simplemodal.1.4.1.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#explorar_galeria").click(function(){
+      $("#modal_content").attr({'src':'/mapeo/ficha/galeria/cooperativa/{{objeto.id}}/'});
+      $("#modal_content").modal({overlayClose:true});
+    });
+  });
+</script>
+{%endblock%}
 {% block extratitle %}
 | Cooperativa | Resultados
 {% endblock %}
@@ -48,6 +59,7 @@
             <div class="dato_valor">
                 {%if objeto.foto1%}
                 <img class="foto" src="{{objeto.foto1.url_227x154}}" alt="Foto finca">
+                <div class="explorar_fotos"><a href="#" id="explorar_galeria">Explorar Galería</a></div>
                 {%else%}
                 <img class="foto" src="/files/images/img.png" alt="Foto finca">
                 {%endif%}
@@ -156,5 +168,11 @@
         </div>
         <div class="clean"></div>
     </div>        
-</div>
+    </div>
+<iframe style="display: none;" id="modal_content" src="" 
+   width="640" 
+   height="500" 
+   scrolling="yes" 
+    frameborder="0">
+</iframe>
 {% endblock %}

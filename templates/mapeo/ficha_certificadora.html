@@ -1,4 +1,15 @@
 {% extends "base.html" %}
+{%block extrahead%}
+<script type="text/javascript" src="{{MEDIA_URL}}js/jquery.simplemodal.1.4.1.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#explorar_galeria").click(function(){
+      $("#modal_content").attr({'src':'/mapeo/ficha/galeria/familia/{{objeto.id}}/'});
+      $("#modal_content").modal({overlayClose:true});
+    });
+  });
+</script>
+{%endblock%}
 {% block extratitle %}
 | Empresa Certificadora | Resultados
 {% endblock %}
@@ -19,55 +30,101 @@
   {{objeto.pagina_web}}</br>
   {{objeto.desde}}</br>
   {{objeto.promedio}}</br>
-
-  Información detallada.</br>
-  Árboles
-  <ul>
-  {%for elemento in  objeto.arboles.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Animales
-  <ul>
-  {%for elemento in  objeto.animales.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Cultivos
-  <ul>
-  {%for elemento in  objeto.cultivos.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Semillas
-  <ul>
-  {%for elemento in  objeto.semillas.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Materia Procesada
-  <ul>
-  {%for elemento in  objeto.materia_procesada.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Certificacion 
-  <ul>
-  {%for elemento in  objeto.certificacion.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Buenas Prácticas 
-  <ul>
-  {%for elemento in  objeto.buenas_practicas.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Tipo Cliente  
-  <ul>
-  {%for elemento in  objeto.tipo_cliente.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
+  <div class="info_detallada">
+        <div class="todos_left">
+            <div class="subtitle">Tipo de Organizaci&oacute;n</div>
+            <div class="detalles2">
+                <ul class="details">
+                    {%for elemento in  objeto.tipo_org.all%}
+                    <li>{{elemento.nombre}}</li>
+                    {%endfor%}
+                </ul>
+                <div class="clean"></div>
+            </div>
+        </div>
+        <div class="todos_left dos">
+            <div class="subtitle">Tipo de Certificaci&oacute;n</div>
+            <div class="detalles2">
+                <ul class="details">
+                    {%for elemento in  objeto.certificacion.all%}
+                    <li>{{elemento.nombre}}</li>
+                    {%endfor%}
+                </ul>
+                <div class="clean"></div>
+            </div>
+        </div>
+        <div class="clean"></div>
+        <br>
+        <div class="todos_left">
+            <div class="litle_left uno">
+                <div class="subtitle">Rubros</div>
+                <div class="detalles2">
+                    <div class="subcategoria">&Aacute;rboles</div>
+                    <ul class="details">
+                        {%for elemento in  objeto.arboles.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                    <div class="subcategoria">Animales</div>
+                    <ul class="details">
+                        {%for elemento in  objeto.animales.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                    <div class="subcategoria">Cultivos</div>
+                    <ul class="details">
+                        {%for elemento in  objeto.cultivos.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+            </div>
+            <div class="litle_left">
+                <div class="subtitle">Semillas</div>
+                <div class="detalles2">
+                    <ul class="details">
+                        {%for elemento in  objeto.semillas.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+            </div>
+        </div>
+        <div class="todos_left dos">
+            <div class="litle_left uno">
+                <div class="subtitle">Materia Procesada</div>
+                <div class="detalles2">
+                    <ul class="details">
+                        {%for elemento in  objeto.materia_procesada.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+            </div>
+            <div class="litle_left">
+                <div class="subtitle">Buenas Pr&aacute;cticas</div>
+                <div class="detalles2">
+                    <ul class="details">
+                        {%for elemento in  objeto.buenas_practicas.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clean"></div>
+    </div>
 </div>
+<iframe style="display: none;" id="modal_content" src="" 
+   width="640" 
+   height="500" 
+   scrolling="yes" 
+    frameborder="0">
+</iframe>
 {% endblock %}
