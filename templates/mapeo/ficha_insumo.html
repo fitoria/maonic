@@ -1,4 +1,15 @@
 {% extends "base.html" %}
+{%block extrahead%}
+<script type="text/javascript" src="{{MEDIA_URL}}js/jquery.simplemodal.1.4.1.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#explorar_galeria").click(function(){
+      $("#modal_content").attr({'src':'/mapeo/ficha/galeria/insumo/{{objeto.id}}/'});
+      $("#modal_content").modal({overlayClose:true});
+    });
+  });
+</script>
+{%endblock%}
 {% block extratitle %}
 | Comercializadoras de Insumos | Resultados
 {% endblock %}
@@ -10,64 +21,161 @@
 {% block contenido %}
 <div class="full">
   Información General</br>
-  {{objeto.nombre}}</br>
-  {{objeto.direccion}}</br>
-  {{objeto.municipio.nombre}}</br>
-  {{objeto.telefono}}</br>
-  {{objeto.celular}}</br>
-  {{objeto.email}}</br>
-  {{objeto.pagina_web}}</br>
   {{objeto.desde_insumo}}</br>
   {{objeto.promedio}}</br>
-
-  Información detallada.</br>
-  Árboles
-  <ul>
-  {%for elemento in  objeto.arboles.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Animales
-  <ul>
-  {%for elemento in  objeto.animales.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Cultivos
-  <ul>
-  {%for elemento in  objeto.cultivos.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Semillas
-  <ul>
-  {%for elemento in  objeto.semillas.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Materia Procesada
-  <ul>
-  {%for elemento in  objeto.materia_procesada.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Certificacion 
-  <ul>
-  {%for elemento in  objeto.certificacion.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Buenas Prácticas 
-  <ul>
-  {%for elemento in  objeto.buenas_practicas.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
-  Tipo Clientes  
-  <ul>
-  {%for elemento in  objeto.tipo_cliente.all%}
-  <li>{{elemento.nombre}}</li>
-  {%endfor%}
-  </ul>
+<div class="full">
+    <div class="titulo_cooperativa">
+        <div class="nombre_finca">{{objeto.nombre}}</div>
+    </div>
 </div>
+<div class="ajustado">
+    <div class="subtitle">Datos Generales</div>
+    <div class="todos">
+        <div class="detalles">            
+            <div class="dato">Nombre</div>
+            <div class="dato_valor">{{objeto.nombre}}</div>
+            <div class="dato">Tel&eacute;fono</div>
+            <div class="dato_valor">{% if objeto.telefono %}Tel: {% endif %}{{objeto.telefono}} {% if objeto.celular %} Cel: {% endif %}{{objeto.celular}}</div>
+            <div class="dato">Email</div>
+            <div class="dato_valor">{{objeto.email}}</div>
+            {% if objeto.pagina_web %}
+            <div class="dato">Sitio web (opcional)</div>
+            <div class="dato_valor"><a href="{{objeto.pagina_web}}">{{objeto.pagina_web}}</a></div>
+            {% endif %}            
+        </div>
+        <div class="detalles">
+            <div class="dato">Direccion</div>
+            <div class="dato_valor">{{objeto.direccion}}</div>
+            <div class="dato">Municipio</div>
+            <div class="dato_valor">{{objeto.municipio.nombre}}</div>
+            <div class="dato">Fundada</div>
+            <div class="dato_valor">{{objeto.fecha_est}}</div>
+            <div class="dato">Representante Legal</div>
+            <div class="dato_valor">{{objeto.representante_legal}}</div>
+            <div class="dato">Representante T&eacute;cnico</div>
+            <div class="dato_valor">{{objeto.representante_tecnico}}</div>
+            <div class="dato">Miembros</div>
+            <div class="dato_valor">{{objeto.num_mujeres}} mujeres | {{objeto.num_hombres}} hombres</div>
+        </div>
+        <div class="detalles">
+            <div class="dato">Im&aacute;genes</div>
+            <div class="dato_valor">
+                {%if objeto.foto1%}
+                <img class="foto" src="{{objeto.foto1.url_227x154}}" alt="Foto finca">
+                <div class="explorar_fotos"><a href="#" id="explorar_galeria">Explorar Galería</a></div>
+                {%else%}
+                <img class="foto" src="/files/images/img.png" alt="Foto finca">
+                {%endif%}
+            </div>
+        </div>
+        <div class="clean"></div>
+    </div>
+    <br>
+    <div class="info_detallada">
+        <div class="todos_left">
+            <div class="subtitle">Tipo de Organizaci&oacute;n</div>
+            <div class="detalles2">
+                <ul class="details">
+                    {%for elemento in  objeto.tipo_org.all%}
+                    <li>{{elemento.nombre}}</li>
+                    {%endfor%}
+                </ul>
+                <div class="clean"></div>
+            </div>
+        </div>
+        <div class="todos_left dos">
+            <div class="subtitle">Tipo de Certificaci&oacute;n</div>
+            <div class="detalles2">
+                <ul class="details">
+                    {%for elemento in  objeto.certificacion.all%}
+                    <li>{{elemento.nombre}}</li>
+                    {%endfor%}
+                </ul>
+                <div class="clean"></div>
+            </div>
+        </div>
+        <div class="clean"></div>
+        <br>
+        <div class="todos_left">
+            <div class="litle_left uno">
+                <div class="subtitle">Rubros</div>
+                <div class="detalles2">
+                    <div class="subcategoria">&Aacute;rboles</div>
+                    <ul class="details">
+                        {%for elemento in  objeto.arboles.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                    <div class="subcategoria">Animales</div>
+                    <ul class="details">
+                        {%for elemento in  objeto.animales.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                    <div class="subcategoria">Cultivos</div>
+                    <ul class="details">
+                        {%for elemento in  objeto.cultivos.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+            </div>
+            <div class="litle_left">
+                <div class="subtitle">Semillas</div>
+                <div class="detalles2">
+                    <ul class="details">
+                        {%for elemento in  objeto.semillas.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>                
+            </div>
+        </div>
+        <div class="todos_left dos">
+            <div class="litle_left uno">
+                <div class="subtitle">Materia Procesada</div>
+                <div class="detalles2">
+                    <ul class="details">
+                        {%for elemento in  objeto.materia_procesada.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+                <br>
+                <div class="subtitle">Area Trabajo</div>
+                <div class="detalles2">
+                    <ul class="details">
+                        {%for elemento in  objeto.area_trabajo.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+            </div>
+            <div class="litle_left">
+                <div class="subtitle">Buenas Pr&aacute;cticas</div>
+                <div class="detalles2">
+                    <ul class="details">
+                        {%for elemento in  objeto.buenas_practicas.all%}
+                        <li>{{elemento.nombre}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clean"></div>
+    </div>        
+    </div>
+<iframe style="display: none;" id="modal_content" src="" 
+   width="640" 
+   height="500" 
+   scrolling="yes" 
+    frameborder="0">
+</iframe>
 {% endblock %}

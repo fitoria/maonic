@@ -20,14 +20,53 @@
 {% endblock %}
 {% block contenido %}
 <div class="full">
-  Información General</br>
-  {{objeto.nombre}}</br>
-  {{objeto.direccion}}</br>
-  {{objeto.municipio.nombre}}</br>
-  {{objeto.telefono}}</br>
-  {{objeto.celular}}</br>
-  {{objeto.email}}</br>
-  {{objeto.pagina_web}}</br>
+    <div class="titulo_cooperativa">
+        <div class="nombre_finca">{{objeto.nombre}}</div>
+    </div>
+</div>
+<div class="ajustado">
+    <div class="subtitle">Datos Generales</div>
+    <div class="todos">
+        <div class="detalles">            
+            <div class="dato">Nombre</div>
+            <div class="dato_valor">{{objeto.nombre}}</div>
+            <div class="dato">Tel&eacute;fono</div>
+            <div class="dato_valor">{% if objeto.telefono %}Tel: {% endif %}{{objeto.telefono}} {% if objeto.celular %} Cel: {% endif %}{{objeto.celular}}</div>
+            <div class="dato">Email</div>
+            <div class="dato_valor">{{objeto.email}}</div>
+            {% if objeto.pagina_web %}
+            <div class="dato">Sitio web (opcional)</div>
+            <div class="dato_valor"><a href="{{objeto.pagina_web}}">{{objeto.pagina_web}}</a></div>
+            {% endif %}            
+        </div>
+        <div class="detalles">
+            <div class="dato">Direccion</div>
+            <div class="dato_valor">{{objeto.direccion}}</div>
+            <div class="dato">Municipio</div>
+            <div class="dato_valor">{{objeto.municipio.nombre}}</div>
+            <div class="dato">Fundada</div>
+            <div class="dato_valor">{{objeto.fecha_est}}</div>
+            <div class="dato">Representante Legal</div>
+            <div class="dato_valor">{{objeto.representante_legal}}</div>
+            <div class="dato">Representante T&eacute;cnico</div>
+            <div class="dato_valor">{{objeto.representante_tecnico}}</div>
+            <div class="dato">Miembros</div>
+            <div class="dato_valor">{{objeto.num_mujeres}} mujeres | {{objeto.num_hombres}} hombres</div>
+        </div>
+        <div class="detalles">
+            <div class="dato">Im&aacute;genes</div>
+            <div class="dato_valor">
+                {%if objeto.foto1%}
+                <img class="foto" src="{{objeto.foto1.url_227x154}}" alt="Foto finca">
+                <div class="explorar_fotos"><a href="#" id="explorar_galeria">Explorar Galería</a></div>
+                {%else%}
+                <img class="foto" src="/files/images/img.png" alt="Foto finca">
+                {%endif%}
+            </div>
+        </div>
+        <div class="clean"></div>
+    </div>
+    <br>
   {{objeto.desde}}</br>
   {{objeto.promedio}}</br>
   <div class="info_detallada">
