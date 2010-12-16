@@ -20,8 +20,6 @@
 {% endblock %}
 {% block contenido %}
 <div class="full">
-  {{objeto.desde}}</br>
-  {{objeto.promedio}}</br>
 <div class="full">
     <div class="titulo_cooperativa">
         <div class="nombre_finca">{{objeto.nombre}}</div>
@@ -47,14 +45,10 @@
             <div class="dato_valor">{{objeto.direccion}}</div>
             <div class="dato">Municipio</div>
             <div class="dato_valor">{{objeto.municipio.nombre}}</div>
-            <div class="dato">Fundada</div>
-            <div class="dato_valor">{{objeto.fecha_est}}</div>
-            <div class="dato">Representante Legal</div>
-            <div class="dato_valor">{{objeto.representante_legal}}</div>
-            <div class="dato">Representante T&eacute;cnico</div>
-            <div class="dato_valor">{{objeto.representante_tecnico}}</div>
-            <div class="dato">Miembros</div>
-            <div class="dato_valor">{{objeto.num_mujeres}} mujeres | {{objeto.num_hombres}} hombres</div>
+            <div class="dato">Desde cuando financian</div>
+            <div class="dato_valor">{{objeto.desde}}</div>
+            <div class="dato">Número de clientes por año</div>
+            <div class="dato_valor">{{objeto.promedio}}</div>
         </div>
         <div class="detalles">
             <div class="dato">Im&aacute;genes</div>

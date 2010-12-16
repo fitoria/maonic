@@ -4,7 +4,7 @@
 <script>
   $(document).ready(function(){
     $("#explorar_galeria").click(function(){
-      $("#modal_content").attr({'src':'/mapeo/ficha/galeria/familia/{{objeto.id}}/'});
+      $("#modal_content").attr({'src':'/mapeo/ficha/galeria/certificadora/{{objeto.id}}/'});
       $("#modal_content").modal({overlayClose:true});
     });
   });
@@ -44,14 +44,10 @@
             <div class="dato_valor">{{objeto.direccion}}</div>
             <div class="dato">Municipio</div>
             <div class="dato_valor">{{objeto.municipio.nombre}}</div>
-            <div class="dato">Fundada</div>
-            <div class="dato_valor">{{objeto.fecha_est}}</div>
-            <div class="dato">Representante Legal</div>
-            <div class="dato_valor">{{objeto.representante_legal}}</div>
-            <div class="dato">Representante T&eacute;cnico</div>
-            <div class="dato_valor">{{objeto.representante_tecnico}}</div>
-            <div class="dato">Miembros</div>
-            <div class="dato_valor">{{objeto.num_mujeres}} mujeres | {{objeto.num_hombres}} hombres</div>
+            <div class="dato">Desde cuando certifican</div>
+            <div class="dato_valor">{{objeto.desde}}</div>
+            <div class="dato">Promedio de certificaciones por año</div>
+            <div class="dato_valor">{{objeto.promedio}}</div>
         </div>
         <div class="detalles">
             <div class="dato">Im&aacute;genes</div>
