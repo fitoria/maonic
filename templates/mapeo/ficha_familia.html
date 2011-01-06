@@ -34,7 +34,7 @@
             <div class="dato">Nombre de contacto</div>
             <div class="dato_valor">{{objeto.nombre}}</div>
             <div class="dato">Tel&eacute;fono</div>
-            <div class="dato_valor">{% if objeto.telefono %}Tel: {% endif %}{{objeto.telefono}} {% if objeto.celular %} Cel: {% endif %}{{objeto.celular}}</div>
+            <div class="dato_valor">{% if objeto.telefono %}Tel: {{objeto.telefono}} {% endif %}{% if objeto.celular %}| Cel: {% endif %}{{objeto.celular}}</div>
             <div class="dato">Email</div>
             <div class="dato_valor">{{objeto.email}}</div>
             {% if objeto.pagina_web %}

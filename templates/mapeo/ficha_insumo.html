@@ -20,7 +20,7 @@
 {% endblock %}
 {% block contenido %}
 <div class="full">
-    <div class="titulo_cooperativa">
+    <div class="titulo_insumo">
         <div class="nombre_finca">{{objeto.nombre}}</div>
     </div>
 </div>
@@ -31,16 +31,16 @@
             <div class="dato">Nombre</div>
             <div class="dato_valor">{{objeto.nombre}}</div>
             <div class="dato">Tel&eacute;fono</div>
-            <div class="dato_valor">{% if objeto.telefono %}Tel: {% endif %}{{objeto.telefono}} {% if objeto.celular %} Cel: {% endif %}{{objeto.celular}}</div>
+            <div class="dato_valor">{% if objeto.telefono %}Tel: {% endif %}{{objeto.telefono}} {% if objeto.celular %}| Cel: {% endif %}{{objeto.celular}}</div>
             <div class="dato">Email</div>
             <div class="dato_valor">{{objeto.email}}</div>
             {% if objeto.pagina_web %}
-            <div class="dato">Sitio web (opcional)</div>
+            <div class="dato">Sitio web</div>
             <div class="dato_valor"><a href="{{objeto.pagina_web}}">{{objeto.pagina_web}}</a></div>
             {% endif %}            
         </div>
         <div class="detalles">
-            <div class="dato">Direccion</div>
+            <div class="dato">Dirección</div>
             <div class="dato_valor">{{objeto.direccion}}</div>
             <div class="dato">Municipio</div>
             <div class="dato_valor">{{objeto.municipio.nombre}}</div>
@@ -65,10 +65,10 @@
     <br>
     <div class="info_detallada">
         <div class="todos_left">
-            <div class="subtitle">Tipo de Organizaci&oacute;n</div>
+          <div class="subtitle">Tipo de Cliente</div>
             <div class="detalles2">
                 <ul class="details">
-                    {%for elemento in  objeto.tipo_org.all%}
+                    {%for elemento in  objeto.tipo_cliente.all%}
                     <li>{{elemento.nombre}}</li>
                     {%endfor%}
                 </ul>
@@ -139,15 +139,6 @@
                     <div class="clean"></div>
                 </div>
                 <br>
-                <div class="subtitle">Area Trabajo</div>
-                <div class="detalles2">
-                    <ul class="details">
-                        {%for elemento in  objeto.area_trabajo.all%}
-                        <li>{{elemento.nombre}}</li>
-                        {%endfor%}
-                    </ul>
-                    <div class="clean"></div>
-                </div>
             </div>
             <div class="litle_left">
                 <div class="subtitle">Buenas Pr&aacute;cticas</div>

@@ -458,6 +458,7 @@ color:#9ea925;
 .ui-multiselect-filter input {
     width: 150px;
 }
+
 .titulo_familia{
     background: #d9dc7c;
     height: 50px;
@@ -470,6 +471,37 @@ color:#9ea925;
     background: #eddd49;
     height: 50px;
 }
+
+.titulo_orgpublica{
+    background: #b43e3e;
+    height: 50px;
+}
+
+.titulo_producto{
+    background: #57a692;
+    height: 50px;
+}
+
+.titulo_insumo{
+    background: #64ad43;
+    height: 50px;
+}
+
+.titulo_financiera{
+    background: #ba67ad;
+    height: 50px;
+}
+
+.titulo_certificadora{
+    background: #5d68b6;
+    height: 50px;
+}
+
+.titulo_centrales{
+    background: #e39c1c;
+    height: 50px;
+}
+
 .nombre_finca{
     font-size: 20px;
     color: #343434;
