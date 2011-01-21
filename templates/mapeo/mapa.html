@@ -40,13 +40,7 @@
                         id: elemento.id                        
                     });
                     attachInfowindow(marker, elemento.id, item, elemento.nombre);
-                    markers.push(marker);
-                    /*google.maps.event.addListener(marker, 'click', function() {
-                        infowindow.open(map, marker);
-                        var text = '<div class="infowindow">'+elemento.nombre+'<br><ul>';
-                        text += '<li><a href="/mapeo/ficha/' + item + '/' + elemento.id + '">Ver ficha</a></li></ul></div>';
-                        infowindow.setContent(text);
-                    });*/
+                    markers.push(marker);                    
                 });
                 var markerCluster = new MarkerClusterer(map, markers);
             });
@@ -78,18 +72,13 @@
         };
 
 
-        ib = new InfoBox(myOptions);
-        //var infowindow = new google.maps.InfoWindow({ content: '<b>' + description + '</b><br />' + location });
+        ib = new InfoBox(myOptions);        
         google.maps.event.addListener(marker, 'mouseover', function() {
             try{
                 infowindow.close();
             }catch(err){}
             ib.open(map, marker);
-        });
-        /*google.maps.event.addListener(marker, 'mouseout', function() {
-            //infowindow.close();
-            ib.close();
-        });*/
+        });        
     }
 
 </script>
